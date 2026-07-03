@@ -9,7 +9,10 @@ using System;
 public class GameAction
 {
     public string actionName;
-    public string actionResources;
+    public string actionSpritePath;
+    public int resourceMilitary;
+    public int resourceInfluence;
+    public int resourceMoney;
     public string actionDescription;
-    public Action actionFunctionCall;
+    public Func<bool> actionFunctionCall;
 }

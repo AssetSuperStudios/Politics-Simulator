@@ -10,7 +10,7 @@ public class Actions : ScriptableObject
     [SerializeField] private List<GameAction> _actionList = new List<GameAction>();
 
     // Listener event that returns an int
-    public event Action<List<GameAction>> OnValueChanged;
+    public event Action OnValueChanged;
 
     // get
     // set
@@ -23,14 +23,28 @@ public class Actions : ScriptableObject
                 // Invoke the event to notify subscribers of the change
                 // ? is used to check if there are any subscribers before invoking the event
                 // Such that if there are no subscribers, it won't throw a NullReferenceException
-                OnValueChanged?.Invoke(_actionList);
+                OnValueChanged?.Invoke();
             }
+        }
+    }
+
+    // Inspector Testing Only
+    // Keep a cache of the values to compare against in the editor
+    private int _oldActionList;
+    private void OnValidate()
+    {
+        // Only fire if the new Inspector value doesn't match the old cached value
+        if (_actionList.Count != _oldActionList)
+        {
+            _oldActionList = _actionList.Count;
+            OnValueChanged?.Invoke();
         }
     }
 }
 
+// See GameActionsManager.cs
 // To set and create a new ActionList:
-//      Add a reference to the Actions ScriptableObject
+//      Add a reference to this Actions ScriptableObject
 // public Actions actionsReference;
 //      Create a temp list
 // List<GameAction> tempList = new List<GameAction>();
