@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f2b543d245254438dcc5c6277e118e, type: 3}
+  m_Name: BhabymE
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
+  spriteImage: {fileID: -808446239932818183, guid: 2899999ae6448694e9800086abcb98d1, type: 3}
+  stringName: Bhaby mE
+  stringPath: Bhaby_mE
+  percentageMoneyModifier: 1.5
+  percentageMilitaryModifier: 0.9
+  percentageInfluenceModifier: 0.9

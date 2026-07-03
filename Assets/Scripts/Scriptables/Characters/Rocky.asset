@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f2b543d245254438dcc5c6277e118e, type: 3}
+  m_Name: Rocky
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
+  spriteImage: {fileID: -5146381278953134949, guid: 9ab4f9fd6f6a7724babf3103b68e0234, type: 3}
+  stringName: Rocky
+  stringPath: Rocky
+  percentageMoneyModifier: 0.9
+  percentageMilitaryModifier: 1.5
+  percentageInfluenceModifier: 0.9
