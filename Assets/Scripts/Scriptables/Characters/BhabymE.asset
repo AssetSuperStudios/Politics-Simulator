@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
   spriteImage: {fileID: -808446239932818183, guid: 2899999ae6448694e9800086abcb98d1, type: 3}
   stringName: Bhaby mE
+  stringPath: Bhaby_mE
   percentageMoneyModifier: 1.5
   percentageMilitaryModifier: 0.9
   percentageInfluenceModifier: 0.9

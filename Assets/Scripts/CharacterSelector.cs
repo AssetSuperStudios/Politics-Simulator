@@ -10,6 +10,8 @@ public class CharacterSelector : MonoBehaviour
     [SerializeField] TMP_Text selectedText;
     // Serialize CharacterStats List
     [SerializeField] CharacterStats[] characterList;
+    // Serialize Data CharacterStats
+    [SerializeField] CharacterStats playerData;
     // Private variables for Character Cycling
     private CharacterStats selectedCharacter;
     private int selectedIndex = 0;
@@ -23,6 +25,14 @@ public class CharacterSelector : MonoBehaviour
         selectedText.SetText($"Money Modifier: {selectedCharacter.percentageMoneyModifier}x \n" + 
                             $"Military Modifier: {selectedCharacter.percentageMilitaryModifier}x \n" + 
                             $"Influence Modifier: {selectedCharacter.percentageInfluenceModifier}x");
+
+        // Set the playerData to the selectedCharacter
+        playerData.spriteImage = selectedCharacter.spriteImage;
+        playerData.stringName = selectedCharacter.stringName;
+        playerData.stringPath = selectedCharacter.stringPath;
+        playerData.percentageMoneyModifier = selectedCharacter.percentageMoneyModifier;
+        playerData.percentageMilitaryModifier = selectedCharacter.percentageMilitaryModifier;
+        playerData.percentageInfluenceModifier = selectedCharacter.percentageInfluenceModifier;
     }
 
     // Called on a button click
@@ -40,5 +50,13 @@ public class CharacterSelector : MonoBehaviour
         selectedText.SetText($"Money Modifier: {selectedCharacter.percentageMoneyModifier}x \n" + 
                             $"Military Modifier: {selectedCharacter.percentageMilitaryModifier}x \n" + 
                             $"Influence Modifier: {selectedCharacter.percentageInfluenceModifier}x");
+        
+        // Set the playerData to the selectedCharacter
+        playerData.spriteImage = selectedCharacter.spriteImage;
+        playerData.stringName = selectedCharacter.stringName;
+        playerData.stringPath = selectedCharacter.stringPath;
+        playerData.percentageMoneyModifier = selectedCharacter.percentageMoneyModifier;
+        playerData.percentageMilitaryModifier = selectedCharacter.percentageMilitaryModifier;
+        playerData.percentageInfluenceModifier = selectedCharacter.percentageInfluenceModifier;
     }
 }

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
   spriteImage: {fileID: -6805071841582013709, guid: 5c2485879b3faee41b22bbc01d21e24d, type: 3}
   stringName: Action Star
+  stringPath: Action_Star
   percentageMoneyModifier: 1
   percentageMilitaryModifier: 1
   percentageInfluenceModifier: 1

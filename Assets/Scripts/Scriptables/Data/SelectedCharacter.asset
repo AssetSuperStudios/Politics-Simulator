@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f2b543d245254438dcc5c6277e118e, type: 3}
-  m_Name: FatherD
+  m_Name: SelectedCharacter
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
   spriteImage: {fileID: -3147540581332679419, guid: 3c0c9dc180149bc43863c8b7c65a596b, type: 3}
   stringName: Father D
-  stringPath: Father_D
+  stringPath: Rocky
   percentageMoneyModifier: 0.9
   percentageMilitaryModifier: 0.9
   percentageInfluenceModifier: 1.5

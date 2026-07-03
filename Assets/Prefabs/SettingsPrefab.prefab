@@ -110,7 +110,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1128, y: -250}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2333480255476129101
 CanvasRenderer:
@@ -140,57 +140,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'q
-
-    w
-
-    e
-
-    r
-
-    t
-
-    y
-
-    u
-
-    i
-
-    o
-
-    p
-
-    a
-
-    s
-
-    d
-
-    f
-
-    g
-
-    h
-
-    j
-
-    k
-
-    l
-
-    z
-
-    x
-
-    c
-
-    v
-
-    b
-
-    n
-
-    m'
+  m_text: "<b>Project Manager:</b> DrDragren\r\n\r\n<b>Front End Developer:</b> DrDragren\r\n<b>Back
+    End Developer:</b> LostKey09\r\n\r\n<b>Lead Art Director:</b> DrDragren\r\n<b>Technical
+    Art Director:</b> DrDragren\r\n<b>Artist:</b> DrDragren\r\n\r\n<b>Lead Game Designer:</b>
+    Rabu\r\n<b>Associate Game Designer:</b> GZPY\r\n\r\nSome art used in this project
+    were from the following:\r\n\u201C<i>Modern City Backgrounds Pixel Art</i>\u201D
+    created by <b>CraftPix.Net</b>\r\n\r\nFonts used in this project were from the
+    following:\r\n\u201C<i>Pixelated Elegance Font</i>\u201D designed by <b>GGBotNet</b>
+    and made with PixelForge\r\n\u201C<i>Raster Forge Font</i>\u201D designed by
+    <b>GGBotNet</b>\r\n\r\nSome of the sounds in this project were from the following:\r\n\u201C<i>Universal
+    UI Soundpack</i>\u201D created and distributed by </b>Nathan Gibson</b>\r\n\u201C<i>Pixel
+    Forge Jam Music</i>\u201D provided by <b>QKing</b>\r\n\u201C<i>UI and Item sounds
+    Sample 1</i>\u201D created by <b>ViRiX Dreamcore (David McKee) <u>soundcloud.com/virix</u></b>\r\n\"<i>The
+    Essential Retro Video Game Sound Effects Collection [512 sounds]</i>\" created
+    by <b>Juhani Junkala</b>\r\n\u201C<i>Select 003</i>\u201D created by <b>CreatorsHome</b>\r\n\u201C<i>UI
+    Radio Select</i>\u201D created by <b>SoundShelfStudio</b>\r\n\r\nSpecial thanks
+    to our playtesters:\r\n..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a34e75096667488a027fec7939ea8, type: 2}
   m_sharedMaterial: {fileID: -3416384718526908630, guid: 187a34e75096667488a027fec7939ea8, type: 2}
@@ -217,8 +182,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1139,8 +1104,8 @@ CanvasGroup:
   m_GameObject: {fileID: 5059756988235783522}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &5224742136936118883
 GameObject:
@@ -5475,6 +5440,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793403332452906046, guid: b8cf1df50a8ebea479a924c392a7c839, type: 3}
       propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415733032156455137, guid: b8cf1df50a8ebea479a924c392a7c839, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2415733032156455137, guid: b8cf1df50a8ebea479a924c392a7c839, type: 3}
