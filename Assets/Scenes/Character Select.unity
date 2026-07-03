@@ -504,6 +504,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4222345829476138012, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222345829476138012, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4407899644022303174, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0

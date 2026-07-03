@@ -17,7 +17,7 @@ MonoBehaviour:
   _moneyValue: 100
   _militaryValue: 10000
   _influenceValue: 100
-  _satisfactionPercentage: 2
-  _safetyPercentage: 3
-  _timeDay: 360
+  _satisfactionPercentage: 1
+  _safetyPercentage: 0
+  _timeDay: 1
   _loseStatus: 1
