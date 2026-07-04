@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class DataTracker : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class DataTracker : MonoBehaviour
     [SerializeField] private Image satisfactionImage;
     [SerializeField] private Image safetyImage;
     [SerializeField] private TMP_Text timeText;
+    [SerializeField] private GameObject buttonHolder;
     // Serialize CharacterStats and Declare string path
     [SerializeField] private CharacterStats selectedCharacter;
     private string safetySpritePath;
@@ -62,6 +64,99 @@ public class DataTracker : MonoBehaviour
     void ClassChange(string newClassName)
     {
         classText.text = newClassName;
+        var tempList = buttonHolder.GetComponentsInChildren<Button>();
+        var tempCount = 0;
+        switch (newClassName)
+        {
+            case ("Mayor"):
+                foreach (var buttonItem in tempList)
+                {
+                    if (tempCount < 3)
+                    {
+                        buttonItem.interactable = true;
+                    } else
+                    {
+                        buttonItem.interactable = false;
+                    }
+
+                    tempCount++;
+                }
+                break;
+            case ("Governor"):
+                foreach (var buttonItem in tempList)
+                {
+                    if (tempCount < 4)
+                    {
+                        buttonItem.interactable = true;
+                    } else
+                    {
+                        buttonItem.interactable = false;
+                    }
+
+                    tempCount++;
+                }
+                break;
+            case ("Congress"):
+                foreach (var buttonItem in tempList)
+                {
+                    if (tempCount < 5)
+                    {
+                        buttonItem.interactable = true;
+                    } else
+                    {
+                        buttonItem.interactable = false;
+                    }
+
+                    tempCount++;
+                }
+                break;
+            case ("Senator"):
+                foreach (var buttonItem in tempList)
+                {
+                    if (tempCount < 6)
+                    {
+                        buttonItem.interactable = true;
+                    } else
+                    {
+                        buttonItem.interactable = false;
+                    }
+
+                    tempCount++;
+                }
+                break;
+            case ("VP"):
+                foreach (var buttonItem in tempList)
+                {
+                    if (tempCount < 7)
+                    {
+                        buttonItem.interactable = true;
+                    } else
+                    {
+                        buttonItem.interactable = false;
+                    }
+
+                    tempCount++;
+                }
+                break;
+            case ("President"):
+                foreach (var buttonItem in tempList)
+                {
+                    if (tempCount < 8)
+                    {
+                        buttonItem.interactable = true;
+                    } else
+                    {
+                        buttonItem.interactable = false;
+                    }
+
+                    tempCount++;
+                }
+                break;
+            default:
+                Debug.LogError("That class does not exist.");
+                break;
+        }
+
         Debug.Log($"Class Name changed to: {newClassName}");
     }
     void MoneyChange(int newMoneyValue)

@@ -129,6 +129,19 @@ public class Data : ScriptableObject
         }
     }
 
+    // Index of 0 to 7
+    [SerializeField] private int _locationIndex;
+    public event Action<int> OnLocationChanged;
+    public int LocationIndex {
+        get => _locationIndex;
+        set {
+            if (_locationIndex != value) {
+                _locationIndex = value;
+                OnLocationChanged?.Invoke(_locationIndex);
+            }
+        }
+    }
+
     // Inspector Testing Only
     // Keep a cache of the values to compare against in the editor
     private string _oldClassName;
@@ -139,6 +152,7 @@ public class Data : ScriptableObject
     private int _oldSafety;
     private int _oldTimeDay;
     private bool _oldLoseStatus;
+    private int _oldLocationIndex;
     private void OnValidate()
     {
         // Only fire if the new Inspector value doesn't match the old cached value
@@ -188,6 +202,12 @@ public class Data : ScriptableObject
         {
             _oldLoseStatus = _loseStatus;
             OnLoseStatusChanged?.Invoke(_loseStatus);
+        }
+
+        if (_locationIndex != _oldLocationIndex)
+        {
+            _oldLocationIndex = _locationIndex;
+            OnLocationChanged?.Invoke(_locationIndex);
         }
     }
 }

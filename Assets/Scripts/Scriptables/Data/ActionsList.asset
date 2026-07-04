@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee7810f5f84dacc46a7df2fcbff5816e, type: 3}
+  m_Name: ActionsList
+  m_EditorClassIdentifier: Assembly-CSharp::Actions
+  _actionList:
+  - actionName: Build Farm
+    actionSpritePath: build_farm
+    resourceMilitary: 50
+    resourceInfluence: 20
+    resourceMoney: 100
+    actionDescription: Construct a farm to increase food production.
+  - actionName: Build Barracks
+    actionSpritePath: build_barracks
+    resourceMilitary: 100
+    resourceInfluence: 30
+    resourceMoney: 200
+    actionDescription: Construct a barracks to train soldiers.
+  - actionName: Upgrade Castle
+    actionSpritePath: upgrade_castle
+    resourceMilitary: 200
+    resourceInfluence: 50
+    resourceMoney: 500
+    actionDescription: Upgrade the castle to increase its defenses.
+  - actionName: Build Wall
+    actionSpritePath: build_wall
+    resourceMilitary: 10
+    resourceInfluence: 10
+    resourceMoney: 10
+    actionDescription: Construct a wall to increase defenses.
+  - actionName: Hire Soldiers
+    actionSpritePath: hire_soldiers
+    resourceMilitary: 0
+    resourceInfluence: 20
+    resourceMoney: 100
+    actionDescription: Hire soldiers to strengthen your army.
+  - actionName: Build Mine
+    actionSpritePath: build_mine
+    resourceMilitary: 50
+    resourceInfluence: 20
+    resourceMoney: 100
+    actionDescription: Construct a mine to increase resource production.
+  - actionName: Assign Workers
+    actionSpritePath: assign_workers
+    resourceMilitary: 0
+    resourceInfluence: 80
+    resourceMoney: 100
+    actionDescription: Assign workers to increase food production.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
+  - actionName: Start Trade
+    actionSpritePath: start_trade
+    resourceMilitary: 50
+    resourceInfluence: 200
+    resourceMoney: 0
+    actionDescription: Start trading to increase wealth.
