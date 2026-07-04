@@ -8,5 +8,6 @@ public class OpenSettings : MonoBehaviour
         canvasSettings.alpha = 1;
         canvasSettings.interactable = true;
         canvasSettings.blocksRaycasts = true;
+        CalendarTick.isPaused = true;
     }
 }
