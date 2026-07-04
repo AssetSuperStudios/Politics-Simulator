@@ -227,10 +227,6 @@ public class DataTracker : MonoBehaviour
         timeText.text = $"{newTimeDay.ToString().PadLeft (3, '0')}";
         Debug.Log($"Time Day changed to: {newTimeDay.ToString().PadLeft (3, '0')}");
     }
-    public void TimeIncrement()
-    {
-        playerData.TimeDay++;
-    }
     void LoseStatusChange(bool newLoseStatus)
     {
         if (newLoseStatus)

@@ -8299,6 +8299,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1725904385}
+    - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1725904386}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
 --- !u!224 &1703294206 stripped
 RectTransform:
@@ -8466,6 +8469,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725904380}
   m_CullTransparentMesh: 1
+--- !u!114 &1725904386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725904380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35b7e744acbeed44b6291211de79eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CalendarTick
+  playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
+  tickInterval: 1
 --- !u!1001 &1787241294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9765,7 +9782,6 @@ GameObject:
   - component: {fileID: 1966816476}
   - component: {fileID: 1966816477}
   - component: {fileID: 1966816478}
-  - component: {fileID: 1966816479}
   m_Layer: 5
   m_Name: DataHolder
   m_TagString: Untagged
@@ -9834,20 +9850,6 @@ MonoBehaviour:
   timeText: {fileID: 292670916}
   buttonHolder: {fileID: 1283243861}
   selectedCharacter: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
---- !u!114 &1966816479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966816475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35b7e744acbeed44b6291211de79eff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CalendarTick
-  dataTracker: {fileID: 1966816478}
-  tickInterval: 1
 --- !u!1001 &2071020668
 PrefabInstance:
   m_ObjectHideFlags: 0

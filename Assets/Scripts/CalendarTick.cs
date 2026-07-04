@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CalendarTick : MonoBehaviour
 {
-    public DataTracker dataTracker;
+    [SerializeField] private Data playerData;
     private float timer;
     [SerializeField] private float tickInterval = 1.0f;
     public static bool isPaused = false;
@@ -20,7 +20,7 @@ public class CalendarTick : MonoBehaviour
         while (timer >= tickInterval)
         {
             timer -= tickInterval;
-            dataTracker.TimeIncrement();
+            playerData.TimeDay++;
         }
     }
 }
