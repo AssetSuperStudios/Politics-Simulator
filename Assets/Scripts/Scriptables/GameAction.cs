@@ -13,6 +13,7 @@ public class GameAction
     public int resourceMilitary;
     public int resourceInfluence;
     public int resourceMoney;
+    public int resourceTime;
     public string actionDescription;
     public Func<bool> actionFunctionCall;
 }
