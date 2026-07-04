@@ -1701,7 +1701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584509301450639868, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseTab
+      value: CloseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6584509301450639868, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -1725,7 +1725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179232765208315451, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 7187485354410230287, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_IsActive
