@@ -8302,6 +8302,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1725904386}
+    - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1725904390}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
 --- !u!224 &1703294206 stripped
 RectTransform:
@@ -8460,7 +8463,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameActionsManager
   playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
+  selectedCharacter: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
   actionsReference: {fileID: 11400000, guid: 71e1f2b2facb89247905507170584ab2, type: 2}
+  calendarTick: {fileID: 1725904386}
+  spamCooldown: 0.25
 --- !u!222 &1725904385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8483,6 +8489,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CalendarTick
   playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
   tickInterval: 1
+--- !u!114 &1725904390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725904380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bfa4d2c93c7754dbcbb7613164a0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1787241294
 PrefabInstance:
   m_ObjectHideFlags: 0

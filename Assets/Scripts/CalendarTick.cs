@@ -17,10 +17,15 @@ public class CalendarTick : MonoBehaviour
         if (isPaused) return;
 
         timer += Time.deltaTime;
-        while (timer >= tickInterval)
+        if (timer >= tickInterval)
         {
             timer -= tickInterval;
-            playerData.TimeDay++;
+            DayPassed(1);
         }
+    }
+
+    public void DayPassed(int dayPassed)
+    {
+        playerData.TimeDay += dayPassed;
     }
 }
