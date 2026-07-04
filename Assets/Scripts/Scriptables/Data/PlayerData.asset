@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::Data
   _value: 100
-  _className: Mayor
+  _className: Congress
   _moneyValue: 1
   _militaryValue: 1
   _influenceValue: 1
@@ -21,3 +21,4 @@ MonoBehaviour:
   _safetyPercentage: 0
   _timeDay: 1
   _loseStatus: 0
+  _locationIndex: 0

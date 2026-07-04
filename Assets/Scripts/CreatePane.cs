@@ -15,6 +15,8 @@ public class CreatePane : MonoBehaviour
     {
         // Instantiate the Actions Pane prefab
         GameObject actionsPane = Instantiate(actionsPanePrefab, parentTransform);
+        // Assign the parent Game Object of script that makes the pane draggable
+        actionsPane.GetComponent<DraggableUI>().parentObject = parentTransform.gameObject;
         // Set the values of the Actions Pane based on the action in the index selected
         var action = actionsReference.ActionList[listIndex];
         actionsPane.transform.Find("ButtonAction/TextBoundingBox/TextActionName").GetComponent<TMP_Text>().text = action.actionName;
