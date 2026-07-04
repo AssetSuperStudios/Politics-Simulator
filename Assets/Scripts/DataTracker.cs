@@ -19,6 +19,8 @@ public class DataTracker : MonoBehaviour
     // Serialize CharacterStats and Declare string path
     [SerializeField] private CharacterStats selectedCharacter;
     private string safetySpritePath;
+    [SerializeField] public static int maxInfluence = 680;
+    [SerializeField] public static int daysInYear = 360;
 
     // Change data value on start
     void Start()
@@ -172,7 +174,7 @@ public class DataTracker : MonoBehaviour
     }
     void InfluenceChange(int newInfluenceValue)
     {
-        influenceText.text = $"{newInfluenceValue.ToString()} %";
+        influenceText.text = $"{(int)(newInfluenceValue / (float)maxInfluence * 100)} %";
         Debug.Log($"Influence Value changed to: {newInfluenceValue}");
     }
     void SatisfactionChange(int newSatisfactionPercentage)
@@ -224,7 +226,7 @@ public class DataTracker : MonoBehaviour
     }
     void TimeChange(int newTimeDay)
     {
-        timeText.text = $"{newTimeDay.ToString().PadLeft (3, '0')}";
+        timeText.text = $"{((int)(newTimeDay/daysInYear)+1).ToString().PadLeft (3, '0')}";
         Debug.Log($"Time Day changed to: {newTimeDay.ToString().PadLeft (3, '0')}");
     }
     void LoseStatusChange(bool newLoseStatus)

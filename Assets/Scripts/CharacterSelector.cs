@@ -11,7 +11,8 @@ public class CharacterSelector : MonoBehaviour
     // Serialize CharacterStats List
     [SerializeField] CharacterStats[] characterList;
     // Serialize Data CharacterStats
-    [SerializeField] CharacterStats playerData;
+    [SerializeField] CharacterStats characterStats;
+    [SerializeField] private Data playerData;
     // Private variables for Character Cycling
     private CharacterStats selectedCharacter;
     private int selectedIndex = 0;
@@ -19,6 +20,18 @@ public class CharacterSelector : MonoBehaviour
     // Load initial character at Start
     void Start() {
         CharacterCycle(0);
+
+        NewPlayerData();
+    }
+
+    void NewPlayerData() {
+        playerData.ClassName = "Mayor";
+        playerData.MoneyValue = 300;
+        playerData.MilitaryValue = 50;
+        playerData.InfluenceValue = 50;
+        playerData.TimeDay = 1;
+        playerData.LoseStatus = false;
+        playerData.LocationIndex = 0;
     }
 
     // Called on a button click
@@ -38,11 +51,11 @@ public class CharacterSelector : MonoBehaviour
                             $"Influence Modifier: {selectedCharacter.percentageInfluenceModifier}x");
         
         // Set the playerData to the selectedCharacter
-        playerData.spriteImage = selectedCharacter.spriteImage;
-        playerData.stringName = selectedCharacter.stringName;
-        playerData.stringPath = selectedCharacter.stringPath;
-        playerData.percentageMoneyModifier = selectedCharacter.percentageMoneyModifier;
-        playerData.percentageMilitaryModifier = selectedCharacter.percentageMilitaryModifier;
-        playerData.percentageInfluenceModifier = selectedCharacter.percentageInfluenceModifier;
+        characterStats.spriteImage = selectedCharacter.spriteImage;
+        characterStats.stringName = selectedCharacter.stringName;
+        characterStats.stringPath = selectedCharacter.stringPath;
+        characterStats.percentageMoneyModifier = selectedCharacter.percentageMoneyModifier;
+        characterStats.percentageMilitaryModifier = selectedCharacter.percentageMilitaryModifier;
+        characterStats.percentageInfluenceModifier = selectedCharacter.percentageInfluenceModifier;
     }
 }

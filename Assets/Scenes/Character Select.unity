@@ -650,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323046427837723495, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_fontSize
-      value: 246.9
+      value: 246.85
       objectReference: {fileID: 0}
     - target: {fileID: 8539526962316704136, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -843,7 +843,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d5f7d2b6727d3e41b4c178ea0a68733, type: 2}
   - {fileID: 11400000, guid: d9b7539ec9de12d478939e3b7883aaa2, type: 2}
   - {fileID: 11400000, guid: 9736fc1068ce6434d9ff7449ac5c5c19, type: 2}
-  playerData: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
+  characterStats: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
+  playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
 --- !u!1001 &683399891
 PrefabInstance:
   m_ObjectHideFlags: 0

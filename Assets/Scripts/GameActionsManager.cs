@@ -4,148 +4,108 @@ using System.Collections.Generic;
 public class GameActionsManager : MonoBehaviour
 {
     [SerializeField] private Data playerData;
+    [SerializeField] private CharacterStats selectedCharacter;
     [SerializeField] private Actions actionsReference;
+    public CalendarTick calendarTick;
+
     private List<GameAction> tempList = new List<GameAction>();
-    
-    void Start()
+    private float lastExecutionTime = 0f;
+    [SerializeField] private float spamCooldown = 0.25f;
+
+    // Awake guarantees registration before CreatePane looks up the list data
+    void Awake()
     {
         InitializeActions();
     }
 
     void InitializeActions()
     {
-        tempList.Add(new GameAction
-        {
-            actionName = "Build Farm",
-            actionSpritePath = "build_farm",
-            resourceMilitary = 50,
-            resourceInfluence = 20,
-            resourceMoney = 100,
-            actionDescription = "Construct a farm to increase food production.",
-            actionFunctionCall = BuildFarm
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Build Barracks",
-            actionSpritePath = "build_barracks",
-            resourceMilitary = 100,
-            resourceInfluence = 30,
-            resourceMoney = 200,
-            actionDescription = "Construct a barracks to train soldiers.",
-            actionFunctionCall = BuildBarracks
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Upgrade Castle",
-            actionSpritePath = "upgrade_castle",
-            resourceMilitary = 200,
-            resourceInfluence = 50,
-            resourceMoney = 500,
-            actionDescription = "Upgrade the castle to increase its defenses.",
-            actionFunctionCall = UpgradeCastle
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Build Wall",
-            actionSpritePath = "build_wall",
-            resourceMilitary = 10,
-            resourceInfluence = 10,
-            resourceMoney = 10,
-            actionDescription = "Construct a wall to increase defenses.",
-            actionFunctionCall = BuildWall
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Hire Soldiers",
-            actionSpritePath = "hire_soldiers",
-            resourceMilitary = 0,
-            resourceInfluence = 20,
-            resourceMoney = 100,
-            actionDescription = "Hire soldiers to strengthen your army.",
-            actionFunctionCall = HireSoldiers
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Build Mine",
-            actionSpritePath = "build_mine",
-            resourceMilitary = 50,
-            resourceInfluence = 20,
-            resourceMoney = 100,
-            actionDescription = "Construct a mine to increase resource production.",
-            actionFunctionCall = BuildMine
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Assign Workers",
-            actionSpritePath = "assign_workers",
-            resourceMilitary = 0,
-            resourceInfluence = 80,
-            resourceMoney = 100,
-            actionDescription = "Assign workers to increase food production.",
-            actionFunctionCall = AssignWorkers
-        });
-        tempList.Add(new GameAction
-        {
-            actionName = "Start Trade",
-            actionSpritePath = "start_trade",
-            resourceMilitary = 50,
-            resourceInfluence = 200,
-            resourceMoney = 0,
-            actionDescription = "Start trading to increase wealth.",
-            actionFunctionCall = StartTrade
-        });
-        
+        tempList.Clear();
+
+        // One-line structural registration for every choice card
+        AddAction(
+            "Build Farm", "build_farm", 50, 20, 100, 1, "Construct a farm to increase food production.");
+        AddAction(
+            "Build Barracks", "build_barracks", 100, 30, 200, 1, "Construct a barracks to train soldiers.");
+        AddAction(
+            "Upgrade Castle", "upgrade_castle", 200, 50, 500, 1, "Upgrade the castle to increase its defenses.");
+        AddAction(
+            "Build Wall", "build_wall", 10, 10, 10, 1, "Construct a wall to increase defenses.");
+        AddAction(
+            "Hire Soldiers", "hire_soldiers", 0, 20, 100, 1, "Hire soldiers to strengthen your army.");
+        AddAction(
+            "Build Mine", "build_mine", 50, 20, 100, 1, "Construct a mine to increase resource production.");
+        AddAction(
+            "Assign Workers", "assign_workers", 0, 80, 100, 1, "Assign workers to increase food production.");
+        AddAction(
+            "Start Trade", "start_trade", 50, 200, 0, 1, "Start trading to increase wealth.");
+
         actionsReference.ActionList = tempList;
     }
 
-    // Function calls for the GameAction initialized
-    // Must return true or false whether the action was successful or not (based on resources/requirements)
-    bool BuildFarm()
+    // Helper method: Packs construction, structural tracking, and runtime lambda routing into a single line
+    private void AddAction(string name, string sprite, int mil, int inf, int mon, int time, string desc)
     {
-        Debug.Log("Building a farm...");
-        playerData.ClassName = "Governor";
-        return true;
+        GameAction act = new GameAction
+        {
+            actionName = name,
+            actionSpritePath = sprite,
+            resourceMilitary = mil,
+            resourceInfluence = inf,
+            resourceMoney = mon,
+            resourceTime = time,
+            actionDescription = desc
+        };
+
+        // Capture scope reference perfectly so clicking maps dynamically to the generalized pipeline
+        act.actionFunctionCall = () => ExecuteActionPipeline(act);
+        tempList.Add(act);
     }
-    bool BuildBarracks()
+
+    // Single unified point of execution replaces all 8 custom named functions
+    private bool ExecuteActionPipeline(GameAction action)
     {
-        Debug.Log("Building a barracks...");
-        playerData.TimeDay = 356;
-        return true;
-    }
-    bool UpgradeCastle()
-    {
-        Debug.Log("Upgrading the castle...");
-        playerData.MoneyValue = 100000;
-        return true;
-    }
-    bool BuildWall()
-    {
-        Debug.Log("Building a wall...");
-        playerData.SatisfactionPercentage = 4;
-        return true;
-    }
-    bool HireSoldiers()
-    {
-        Debug.Log("Hiring soldiers...");
-        playerData.MilitaryValue = 80;
-        return true;
-    }
-    bool BuildMine()
-    {
-        Debug.Log("Building a mine...");
-        playerData.SafetyPercentage = 3;
-        return true;
-    }
-    bool AssignWorkers()
-    {
-        Debug.Log("Assigning workers...");
-        playerData.LoseStatus = true;
-        return false;
-    }
-    bool StartTrade()
-    {
-        Debug.Log("Starting trade...");
-        playerData.InfluenceValue = 200;
+        // Spam prevention: If the last execution was too recent, drop the action and log a warning
+        if (Time.time < lastExecutionTime + spamCooldown)
+        {
+            Debug.LogWarning("Action submission dropped: Input spam tracking filter triggered.");
+            return false;
+        }
+
+        // Check if player has enough resources to execute the action
+        if (playerData.MilitaryValue < action.resourceMilitary ||
+            playerData.InfluenceValue < action.resourceInfluence ||
+            playerData.MoneyValue < action.resourceMoney)
+        {
+            Debug.LogWarning($"Cannot execute {action.actionName}: Insufficient resources available!");
+            return false; // Returns false so CreatePane leaves the panel on screen
+        }
+
+        lastExecutionTime = Time.time;
+        Debug.Log($"Executing action: {action.actionName}...");
+
+        // Resource modification pipeline: Apply character-specific modifiers to the base action values
+        playerData.MilitaryValue += (int)(action.resourceMilitary * selectedCharacter.percentageMilitaryModifier);
+        if (playerData.InfluenceValue + (int)(action.resourceInfluence * selectedCharacter.percentageInfluenceModifier) > DataTracker.maxInfluence)
+        {
+            playerData.InfluenceValue = DataTracker.maxInfluence;
+        }
+        else
+        {
+            playerData.InfluenceValue += (int)(action.resourceInfluence * selectedCharacter.percentageInfluenceModifier);
+        }
+        playerData.MoneyValue += (int)(action.resourceMoney * selectedCharacter.percentageMoneyModifier);
+
+        // 3. Sequential Time Clock Management Pipeline
+        if (calendarTick != null)
+        {
+            calendarTick.DayPassed(action.resourceTime);
+        }
+        else
+        {
+            Debug.LogError("CalendarTick runtime script instance reference missing from manager inspector slot!");
+        }
+
         return true;
     }
 }
