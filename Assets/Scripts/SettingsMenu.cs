@@ -140,6 +140,7 @@ public class SettingsMenu : MonoBehaviour
         canvasTab.alpha = 1;
         canvasTab.interactable = true;
         canvasTab.blocksRaycasts = true;
+        CalendarTick.isPaused = true;
     }
 
     // BUTTONS
@@ -152,5 +153,6 @@ public class SettingsMenu : MonoBehaviour
         canvasTab.interactable = false;
         canvasTab.blocksRaycasts = false;
         PlayerPrefs.Save();
+        CalendarTick.isPaused = false;
     }
 }

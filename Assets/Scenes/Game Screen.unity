@@ -2715,6 +2715,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 841708817883232554, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: isPaused
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 841708817883232554, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: dataTracker
+      value: 
+      objectReference: {fileID: 1966816478}
     - target: {fileID: 949598192452885091, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -3025,7 +3033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323046427837723495, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_fontSize
-      value: 246.9
+      value: 246.85
       objectReference: {fileID: 0}
     - target: {fileID: 8539526962316704136, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7816,6 +7824,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5839834925895255953, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      propertyPath: dataTracker
+      value: 
+      objectReference: {fileID: 1966816478}
     - target: {fileID: 5946848579322691407, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       propertyPath: m_Type
       value: 1
@@ -9281,6 +9293,7 @@ MonoBehaviour:
   safetyImage: {fileID: 834893387}
   timeText: {fileID: 292670916}
   selectedCharacter: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
+  isPaused: 0
 --- !u!1001 &2071020668
 PrefabInstance:
   m_ObjectHideFlags: 0
