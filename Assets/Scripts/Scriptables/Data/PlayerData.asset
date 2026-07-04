@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Data
   _value: 100
   _className: Congress
-  _moneyValue: 1
-  _militaryValue: 1
-  _influenceValue: 1
+  _moneyValue: 100
+  _militaryValue: 100
+  _influenceValue: 100
   _satisfactionPercentage: 0
   _safetyPercentage: 0
-  _timeDay: 1
+  _timeDay: 3
   _loseStatus: 0
   _locationIndex: 0
+  _newSave: 1

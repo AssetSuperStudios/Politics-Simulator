@@ -19,21 +19,7 @@ public class CharacterSelector : MonoBehaviour
 
     // Load initial character at Start
     void Start() {
-        selectedCharacter = characterList[selectedIndex];
-
-        selectedImage.sprite = selectedCharacter.spriteImage;
-        selectedName.SetText(selectedCharacter.stringName);
-        selectedText.SetText($"Money Modifier: {selectedCharacter.percentageMoneyModifier}x \n" + 
-                            $"Military Modifier: {selectedCharacter.percentageMilitaryModifier}x \n" + 
-                            $"Influence Modifier: {selectedCharacter.percentageInfluenceModifier}x");
-
-        // Set the playerData to the selectedCharacter
-        characterStats.spriteImage = selectedCharacter.spriteImage;
-        characterStats.stringName = selectedCharacter.stringName;
-        characterStats.stringPath = selectedCharacter.stringPath;
-        characterStats.percentageMoneyModifier = selectedCharacter.percentageMoneyModifier;
-        characterStats.percentageMilitaryModifier = selectedCharacter.percentageMilitaryModifier;
-        characterStats.percentageInfluenceModifier = selectedCharacter.percentageInfluenceModifier;
+        CharacterCycle(0);
 
         NewPlayerData();
     }

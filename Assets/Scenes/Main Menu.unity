@@ -391,6 +391,10 @@ PrefabInstance:
       value: SceneSwap, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Game Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -589,6 +593,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 402307561}
+    - targetCorrespondingSourceObject: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 402307566}
   m_SourcePrefab: {fileID: 100100000, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
 --- !u!224 &402307559 stripped
 RectTransform:
@@ -612,6 +619,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d4dabc10af5854eaac6dbaac236917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwap
+--- !u!114 &402307566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402307560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3ae7b539f26d64196c551f9c3487d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSaveChecker
+  playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
+  selectedCharacter: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
 --- !u!1001 &730494124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1745,6 +1766,10 @@ PrefabInstance:
     - target: {fileID: 8244598197796969790, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323046427837723495, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: m_fontSize
+      value: 246.95
       objectReference: {fileID: 0}
     - target: {fileID: 8539526962316704136, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.x

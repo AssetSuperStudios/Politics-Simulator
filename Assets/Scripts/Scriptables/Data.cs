@@ -142,6 +142,18 @@ public class Data : ScriptableObject
         }
     }
 
+    [SerializeField] private bool _newSave;
+    public event Action<bool> OnNewSave;
+    public bool NewSave {
+        get => _newSave;
+        set {
+            if (_newSave != value) {
+                _newSave = value;
+                OnNewSave?.Invoke(_newSave);
+            }
+        }
+    }
+
     // Inspector Testing Only
     // Keep a cache of the values to compare against in the editor
     private string _oldClassName;

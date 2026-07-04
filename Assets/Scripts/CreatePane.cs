@@ -23,6 +23,7 @@ public class CreatePane : MonoBehaviour
         actionsPane.transform.Find("ResourcesHolder/MilitaryHolder/TextMoney").GetComponent<TMP_Text>().text = action.resourceMilitary.ToString();
         actionsPane.transform.Find("ResourcesHolder/InfluenceHolder/TextInfluence").GetComponent<TMP_Text>().text = action.resourceInfluence.ToString();
         actionsPane.transform.Find("ResourcesHolder/MoneyHolder/TextMoney").GetComponent<TMP_Text>().text = action.resourceMoney.ToString();
+        actionsPane.transform.Find("ResourcesHolder/TimeHolder/TextTime").GetComponent<TMP_Text>().text = action.resourceTime.ToString();
         actionsPane.transform.Find("TextDescription").GetComponent<TMP_Text>().text = action.actionDescription;
         actionsPane.transform.Find("ButtonAction").GetComponent<Button>().onClick.AddListener(() => {
             bool success = action.actionFunctionCall.Invoke();
