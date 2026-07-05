@@ -305,6 +305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d4dabc10af5854eaac6dbaac236917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwap
+--- !u!1 &1087367642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+  m_PrefabInstance: {fileID: 1469820490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1322659424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,6 +618,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8323046427837723495, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: m_fontSize
+      value: 246.85
+      objectReference: {fileID: 0}
     - target: {fileID: 8539526962316704136, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -786,13 +795,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1749438223}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1469820492}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
 --- !u!224 &1469820491 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
   m_PrefabInstance: {fileID: 1469820490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1469820492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087367642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b57d408c49611499c529bfcb25f451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  textDescription: {fileID: 1898972632}
+  playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
+  lastPlayerData: {fileID: 11400000, guid: 9720ee741f293184997b8cf5c0ad932c, type: 2}
 --- !u!1 &1541747801
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +904,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 345.75
+  m_fontSize: 345.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

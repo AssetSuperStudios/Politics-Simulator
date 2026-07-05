@@ -229,9 +229,9 @@ public class DataTracker : MonoBehaviour
         timeText.text = $"{((int)(newTimeDay/daysInYear)+1).ToString().PadLeft (3, '0')}";
         Debug.Log($"Time Day changed to: {newTimeDay.ToString().PadLeft (3, '0')}");
     }
-    void LoseStatusChange(bool newLoseStatus)
+    void LoseStatusChange(int newLoseStatus)
     {
-        if (newLoseStatus)
+        if (newLoseStatus != 0)
         {
             Debug.Log("Lose Status changed to: True. Game Over.");
             // Call lose function from Back End

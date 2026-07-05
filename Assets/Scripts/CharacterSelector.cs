@@ -13,6 +13,7 @@ public class CharacterSelector : MonoBehaviour
     // Serialize Data CharacterStats
     [SerializeField] CharacterStats characterStats;
     [SerializeField] private Data playerData;
+    [SerializeField] private Data lastPlayerData;
     // Private variables for Character Cycling
     private CharacterStats selectedCharacter;
     private int selectedIndex = 0;
@@ -30,8 +31,20 @@ public class CharacterSelector : MonoBehaviour
         playerData.MilitaryValue = 50;
         playerData.InfluenceValue = 50;
         playerData.TimeDay = 1;
-        playerData.LoseStatus = false;
+        playerData.LoseStatus = 0;
         playerData.LocationIndex = 0;
+        playerData.SatisfactionPercentage = 0;
+        playerData.SafetyPercentage = 0;
+
+        lastPlayerData.ClassName = playerData.ClassName;
+        lastPlayerData.MoneyValue = playerData.MoneyValue;
+        lastPlayerData.MilitaryValue = playerData.MilitaryValue;
+        lastPlayerData.InfluenceValue = playerData.InfluenceValue;
+        lastPlayerData.SatisfactionPercentage = playerData.SatisfactionPercentage;
+        lastPlayerData.SafetyPercentage = playerData.SafetyPercentage;
+        lastPlayerData.TimeDay = playerData.TimeDay;
+        lastPlayerData.LoseStatus = 0;
+        lastPlayerData.LocationIndex = playerData.LocationIndex;
     }
 
     // Called on a button click
