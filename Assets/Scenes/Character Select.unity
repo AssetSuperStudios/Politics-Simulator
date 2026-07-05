@@ -269,22 +269,22 @@ PrefabInstance:
     - {fileID: 8493240245465122886, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 1773771867}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 683399892}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 1626217155}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
-      insertIndex: -1
+      insertIndex: 5
       addedObject: {fileID: 909457644}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
-      insertIndex: -1
+      insertIndex: 6
       addedObject: {fileID: 1078636910}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
-      insertIndex: -1
+      insertIndex: 7
       addedObject: {fileID: 1474897511}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
@@ -607,6 +607,10 @@ PrefabInstance:
     - target: {fileID: 7067722561482078250, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179232765208315451, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00005340576
       objectReference: {fileID: 0}
     - target: {fileID: 7396287427287567614, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y

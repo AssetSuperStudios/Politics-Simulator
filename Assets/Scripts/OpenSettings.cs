@@ -10,4 +10,12 @@ public class OpenSettings : MonoBehaviour
         canvasSettings.blocksRaycasts = true;
         CalendarTick.isPaused = true;
     }
+
+    public void CloseMenu(CanvasGroup canvasSettings)
+    {
+        canvasSettings.alpha = 0;
+        canvasSettings.interactable = false;
+        canvasSettings.blocksRaycasts = false;
+        CalendarTick.isPaused = false;
+    }
 }
