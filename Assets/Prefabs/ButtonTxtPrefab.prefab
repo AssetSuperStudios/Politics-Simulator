@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 56619747824956186}
   - component: {fileID: 7903417068472012137}
   - component: {fileID: 5663294138065000846}
+  - component: {fileID: 2096558670690616759}
   m_Layer: 5
   m_Name: ButtonTxtPrefab
   m_TagString: UI
@@ -404,6 +405,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2096558670690616759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771549351947118231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e488f182bed464448be2fc0e55305442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonUI
+  modeOfCursorHover: 1
+  modeOfCursorClick: 2
 --- !u!1 &4082849058305036986
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4331287700762070636}
   - component: {fileID: 4602181997950863792}
   - component: {fileID: 3021908330224423074}
+  - component: {fileID: 8393166724999805564}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -138,6 +139,29 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &8393166724999805564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3072021915825480675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0722aac40c4eeb42ae71ce047623544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
+  cursorDefault: {fileID: 2800000, guid: 752e7a692316327469f0469d3c84ca6a, type: 3}
+  cursorDisabled: {fileID: 2800000, guid: ef0fb6da2b55b3a4fa0ea63b07eab3e6, type: 3}
+  buttonHover: {fileID: 2800000, guid: 36c1ca0a55a6a8248b13e4d2596469d5, type: 3}
+  buttonClick: {fileID: 2800000, guid: fa119600b474555409132aed7aaf9d4a, type: 3}
+  actionHover: {fileID: 2800000, guid: e51d8f2168fcf974dbfe50543d63830f, type: 3}
+  actionClick: {fileID: 2800000, guid: 5db2aaccec4946041b04cc80f69fa0f4, type: 3}
+  locationHover: {fileID: 2800000, guid: 5d20aa584ada118418c168507f6f7402, type: 3}
+  locationClick: {fileID: 2800000, guid: 6423d444c1fe19c48a9f7ccf8b725280, type: 3}
+  sliderHover: {fileID: 2800000, guid: dd2aef9dcbfbb024aa7fa82b19d80983, type: 3}
+  sliderClick: {fileID: 2800000, guid: dec420766fd7c1b47bcfdf7430117e8c, type: 3}
+  clickPosition: {x: 0, y: 0}
 --- !u!1 &6386985257112072557
 GameObject:
   m_ObjectHideFlags: 0

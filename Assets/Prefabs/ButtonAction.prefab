@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 3570503177428629028}
   - component: {fileID: 8449087644939960669}
   - component: {fileID: 8262548734604794960}
+  - component: {fileID: 7800930271430469973}
   m_Layer: 5
   m_Name: ButtonAction
   m_TagString: UI
@@ -462,6 +463,20 @@ MonoBehaviour:
   actionsReference: {fileID: 11400000, guid: 71e1f2b2facb89247905507170584ab2, type: 2}
   parentTransform: {fileID: 0}
   listIndex: 0
+--- !u!114 &7800930271430469973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781428401237403881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e488f182bed464448be2fc0e55305442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonUI
+  modeOfCursorHover: 3
+  modeOfCursorClick: 4
 --- !u!1 &9105905462143176060
 GameObject:
   m_ObjectHideFlags: 0
