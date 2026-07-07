@@ -849,6 +849,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9736fc1068ce6434d9ff7449ac5c5c19, type: 2}
   characterStats: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
   playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
+  lastPlayerData: {fileID: 11400000, guid: 9720ee741f293184997b8cf5c0ad932c, type: 2}
 --- !u!1001 &683399891
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -117,9 +117,9 @@ public class Data : ScriptableObject
         }
     }
 
-    [SerializeField] private bool _loseStatus;
-    public event Action<bool> OnLoseStatusChanged;
-    public bool LoseStatus {
+    [SerializeField] private int _loseStatus;
+    public event Action<int> OnLoseStatusChanged;
+    public int LoseStatus {
         get => _loseStatus;
         set {
             if (_loseStatus != value) {
@@ -163,7 +163,7 @@ public class Data : ScriptableObject
     private int _oldSatisfaction;
     private int _oldSafety;
     private int _oldTimeDay;
-    private bool _oldLoseStatus;
+    private int _oldLoseStatus;
     private int _oldLocationIndex;
     private void OnValidate()
     {
