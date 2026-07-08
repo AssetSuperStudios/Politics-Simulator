@@ -6,6 +6,7 @@ public class GameActionsManager : MonoBehaviour
     [SerializeField] private Data playerData;
     [SerializeField] private CharacterStats selectedCharacter;
     [SerializeField] private Actions actionsReference;
+    [SerializeField] private UpdateData updateData;
     public CalendarTick calendarTick;
 
     private List<GameAction> tempList = new List<GameAction>();
@@ -110,6 +111,13 @@ public class GameActionsManager : MonoBehaviour
         {
             Debug.LogError("CalendarTick runtime script instance reference missing from manager inspector slot!");
         }
+
+        updateData.newUpdateData(new Updates
+        {
+           updateDescription = "Successful action!",
+           updateSpritePath = action.actionSpritePath,
+           updateFlavorText = action.actionDescription 
+        });
 
         return true;
     }

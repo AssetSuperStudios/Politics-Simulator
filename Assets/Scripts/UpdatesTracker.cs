@@ -20,13 +20,13 @@ public class UpdatesTracker : MonoBehaviour
 
     void OnDisable()
     {
-        UpdateData.OnUpdate += NewUpdates;
+        UpdateData.OnUpdate -= NewUpdates;
     }
 
     void NewUpdates()
     {
-        notifText.text = updatesObject.updateDescription;
-        updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.updateSpritePath}");
-        updatesText.text = updatesObject.updateFlavorText;
+        notifText.text = updatesObject.currentUpdate.updateDescription;
+        updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.currentUpdate.updateSpritePath}");
+        updatesText.text = updatesObject.currentUpdate.updateFlavorText;
     }
 }
