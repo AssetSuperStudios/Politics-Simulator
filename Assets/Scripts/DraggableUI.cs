@@ -1,12 +1,18 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DraggableUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class DraggableUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] public GameObject parentObject;
 
     private RectTransform panelTransform;
     private bool dragStatus;
+
+    [SerializeField] private ModeOfCursor modeOfCursorHover;
+    [SerializeField] private ModeOfCursor modeOfCursorClick;
+
+    private bool isHovering;
 
     void Start()
     {
@@ -55,5 +61,31 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     {
         if (!dragStatus) return;
         dragStatus = false;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isHovering = true;
+        CursorManager.Instance.SetToMode(modeOfCursorHover);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHovering = false;
+        CursorManager.Instance.SetToMode(ModeOfCursor.Default);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        CursorManager.Instance.SetToMode(modeOfCursorClick);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if(isHovering) 
+        {CursorManager.Instance.SetToMode(modeOfCursorHover);}
+        else
+        {CursorManager.Instance.SetToMode(ModeOfCursor.Default);}
+        
     }
 }

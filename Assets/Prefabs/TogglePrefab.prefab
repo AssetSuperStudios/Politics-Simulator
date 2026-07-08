@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 8250842395596851194}
   - component: {fileID: 2469000924900992480}
   - component: {fileID: 3261178896503761346}
+  - component: {fileID: -8939414923527349295}
   m_Layer: 5
   m_Name: TogglePrefab
   m_TagString: UI
@@ -345,6 +346,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8939414923527349295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135157282658507643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e488f182bed464448be2fc0e55305442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonUI
+  modeOfCursorHover: 1
+  modeOfCursorClick: 2
 --- !u!1 &5700631698857170831
 GameObject:
   m_ObjectHideFlags: 0

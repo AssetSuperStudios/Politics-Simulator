@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94724b820c4244549ad7f9b43595d412, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::Data
-  _value: 100
   _className: Mayor
   _moneyValue: 300
   _militaryValue: 50
   _influenceValue: 50
-  _satisfactionPercentage: 0
-  _safetyPercentage: 0
-  _timeDay: 1
+  _satisfactionPercentage: 2
+  _safetyPercentage: 2
+  _timeDay: 67
+  _timeYear: 1
   _loseStatus: 0
   _locationIndex: 0
   _newSave: 0

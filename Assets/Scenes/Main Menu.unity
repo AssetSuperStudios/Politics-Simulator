@@ -985,6 +985,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8393166724999805564, guid: f62d61256f5d0124f990ae11d3043227, type: 3}
+      propertyPath: cursorPanelHover
+      value: 
+      objectReference: {fileID: 2800000, guid: 17aab5e4697428745823e50bb552a9c9, type: 3}
+    - target: {fileID: 8393166724999805564, guid: f62d61256f5d0124f990ae11d3043227, type: 3}
+      propertyPath: cursorButtonHover
+      value: 
+      objectReference: {fileID: 2800000, guid: 3c2b7e99b26de3f43a7bec7c27aab567, type: 3}
     - target: {fileID: 9042870871644850024, guid: f62d61256f5d0124f990ae11d3043227, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1725,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179232765208315451, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000045776367
+      value: 0.00005340576
       objectReference: {fileID: 0}
     - target: {fileID: 7187485354410230287, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_IsActive

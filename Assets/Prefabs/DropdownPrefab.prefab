@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 2893262625554800139}
   - component: {fileID: 7810171494048808333}
   - component: {fileID: 2000923091231803863}
+  - component: {fileID: 2014906231257235548}
   m_Layer: 5
   m_Name: DropdownPrefab
   m_TagString: UI
@@ -1201,6 +1202,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2014906231257235548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032949474882081051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e488f182bed464448be2fc0e55305442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonUI
+  modeOfCursorHover: 1
+  modeOfCursorClick: 2
 --- !u!1 &6134444853700569876
 GameObject:
   m_ObjectHideFlags: 0

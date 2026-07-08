@@ -4,35 +4,6 @@ using System;
 [CreateAssetMenu(fileName = "Data", menuName = "Scriptable Objects/Data")]
 public class Data : ScriptableObject
 {
-    // Sample Data
-    [SerializeField] private int _value;
-
-    // Listener event that returns an int
-    public event Action<int> OnValueChanged;
-
-    // get
-    // set
-    public int Value {
-        get => _value;
-        set {
-            // Change value only if the new value is different from the current value
-            if (_value != value) {
-                _value = value;
-                // Invoke the event to notify subscribers of the change
-                // ? is used to check if there are any subscribers before invoking the event
-                // Such that if there are no subscribers, it won't throw a NullReferenceException
-                OnValueChanged?.Invoke(_value);
-            }
-        }
-    }
-
-    // Method to change the value by a specified amount
-    // Call through Data.ChangeValue(5)
-    public void ChangeValue(int addAmount) {
-        Value += addAmount;
-    }
-
-    // Additional Temp Data
     [SerializeField] private string _className;
     public event Action<string> OnClassNameChanged;
     public string ClassName {
@@ -117,6 +88,18 @@ public class Data : ScriptableObject
         }
     }
 
+    [SerializeField] private int _timeYear;
+    public event Action<int> OnTimeYearChanged;
+    public int TimeYear {
+        get => _timeYear;
+        set {
+            if (_timeYear != value) {
+                _timeYear = value;
+                OnTimeYearChanged?.Invoke(_timeYear);
+            }
+        }
+    }
+
     [SerializeField] private int _loseStatus;
     public event Action<int> OnLoseStatusChanged;
     public int LoseStatus {
@@ -163,6 +146,7 @@ public class Data : ScriptableObject
     private int _oldSatisfaction;
     private int _oldSafety;
     private int _oldTimeDay;
+    private int _oldTimeYear;
     private int _oldLoseStatus;
     private int _oldLocationIndex;
     private void OnValidate()
@@ -208,6 +192,12 @@ public class Data : ScriptableObject
         {
             _oldTimeDay = _timeDay;
             OnTimeDayChanged?.Invoke(_timeDay);
+        }
+
+        if (_timeYear != _oldTimeYear)
+        {
+            _oldTimeYear = _timeYear;
+            OnTimeYearChanged?.Invoke(_timeYear);
         }
 
         if (_loseStatus != _oldLoseStatus)

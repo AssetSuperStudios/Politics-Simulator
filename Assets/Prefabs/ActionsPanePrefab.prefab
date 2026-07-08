@@ -1163,6 +1163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableUI
   parentObject: {fileID: 0}
+  modeOfCursorHover: 3
+  modeOfCursorClick: 4
 --- !u!1 &8222189983240265489
 GameObject:
   m_ObjectHideFlags: 0
