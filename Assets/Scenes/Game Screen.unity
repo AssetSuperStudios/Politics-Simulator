@@ -352,7 +352,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
+  m_fontSize: 50.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
+  m_fontSize: 50.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2402,7 +2402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179232765208315451, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000045776367
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7396287427287567614, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2442,7 +2442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323046427837723495, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_fontSize
-      value: 246.95
+      value: 221.7
       objectReference: {fileID: 0}
     - target: {fileID: 8539526962316704136, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3255,11 +3255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcd9a05c49d8b0498ce33e1c8a6e5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpdatesTracker
-  messageZero: {fileID: 0}
-  messageOne: {fileID: 0}
-  messageTwo: {fileID: 0}
-  messageThree: {fileID: 0}
-  messageFour: {fileID: 0}
+  updatesObject: {fileID: 11400000, guid: a774a56777973cd4086370b381ffa3cb, type: 2}
+  notifText: {fileID: 6654521534322995847}
+  updatesText: {fileID: 2191803835064593599}
+  updatesImage: {fileID: 6789660232450781252}
 --- !u!1 &680848018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3922,7 +3921,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.7
+  m_fontSize: 55.4
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7237,6 +7236,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: d8ec6424437578c44a8f9d5e5ad9f035, type: 2}
   selectedCharacter: {fileID: 11400000, guid: 89121f632fe43c24a890b2babc2c71ab, type: 2}
   actionsReference: {fileID: 11400000, guid: 71e1f2b2facb89247905507170584ab2, type: 2}
+  updateData: {fileID: 11400000, guid: a774a56777973cd4086370b381ffa3cb, type: 2}
   calendarTick: {fileID: 1725904386}
   spamCooldown: 0.25
 --- !u!222 &1725904385
@@ -7937,7 +7937,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
+  m_fontSize: 50.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8065,7 +8065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05, y: 0.03}
   m_AnchorMax: {x: 0.95, y: 0.745}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.000045776367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908454059
@@ -9016,7 +9016,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.55
+  m_fontSize: 46.65
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
