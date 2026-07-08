@@ -15,6 +15,7 @@ public class DataTracker : MonoBehaviour
     [SerializeField] private Image satisfactionImage;
     [SerializeField] private Image safetyImage;
     [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text yearText;
     [SerializeField] private GameObject buttonHolder;
     // Serialize CharacterStats and Declare string path
     [SerializeField] private CharacterStats selectedCharacter;
@@ -35,6 +36,7 @@ public class DataTracker : MonoBehaviour
         SatisfactionChange(playerData.SatisfactionPercentage);
         SafetyChange(playerData.SafetyPercentage);
         TimeChange(playerData.TimeDay);
+        YearChange(playerData.TimeYear);
         LoseStatusChange(playerData.LoseStatus);
     }
 
@@ -48,6 +50,7 @@ public class DataTracker : MonoBehaviour
         playerData.OnSatisfactionPercentageChanged += SatisfactionChange;
         playerData.OnSafetyPercentageChanged += SafetyChange;
         playerData.OnTimeDayChanged += TimeChange;
+        playerData.OnTimeYearChanged += YearChange;
         playerData.OnLoseStatusChanged += LoseStatusChange;
     }
     // Removes OnValueChanged event listeners for all Data in the scene
@@ -60,6 +63,7 @@ public class DataTracker : MonoBehaviour
         playerData.OnSatisfactionPercentageChanged -= SatisfactionChange;
         playerData.OnSafetyPercentageChanged -= SafetyChange;
         playerData.OnTimeDayChanged -= TimeChange;
+        playerData.OnTimeYearChanged -= YearChange;
         playerData.OnLoseStatusChanged -= LoseStatusChange;
     }
 
@@ -227,7 +231,11 @@ public class DataTracker : MonoBehaviour
     void TimeChange(int newTimeDay)
     {
         timeText.text = $"{((int)(newTimeDay/daysInYear)+1).ToString().PadLeft (3, '0')}";
-        Debug.Log($"Time Day changed to: {newTimeDay.ToString().PadLeft (3, '0')}");
+    }
+    void YearChange(int newTimeYear)
+    {
+        yearText.text = $"{((int)newTimeYear).ToString().PadLeft (4, 'X')}";
+        Debug.Log($"Time Day changed to: {newTimeYear.ToString().PadLeft (4, 'X')}");
     }
     void LoseStatusChange(int newLoseStatus)
     {
