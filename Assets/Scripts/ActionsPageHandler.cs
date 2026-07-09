@@ -7,7 +7,7 @@ public class ActionsPageHandler : MonoBehaviour
     // Serialize Actions List and Button Prefab
     [SerializeField] private Actions actionsReference;
     [SerializeField] private GameObject buttonPrefab;
-    [SerializeField] private GameObject objectParent;
+    [SerializeField] private GameObject actionPanel;
 
     // Initialize the Actions Page on start
     void Start()
@@ -42,8 +42,8 @@ public class ActionsPageHandler : MonoBehaviour
             GameObject newButton = Instantiate(buttonPrefab, transform);
             // Get the Image component of the button and set its sprite
             newButton.transform.Find("ImageBoundingBox").GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>($"Sprites/Actions/{action.actionSpritePath}");
-            // Assign the transform and index location parent of script that creates the Actions Pane
-            newButton.GetComponent<CreatePane>().parentTransform = objectParent.transform;
+            // Assign the game object and index location parent of script that creates the Actions Pane
+            newButton.GetComponent<CreatePane>().actionsPanel = actionPanel;
             newButton.GetComponent<CreatePane>().listIndex = actionsReference.ActionList.IndexOf(action);
         }
     }
