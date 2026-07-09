@@ -33,7 +33,7 @@ public class UpdatesTracker : MonoBehaviour
     {
         updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.currentUpdate.updateSpritePath}");
         updatesText.text = updatesObject.currentUpdate.updateFlavorText;
-        await Task.Delay(6000);
+        await Task.Delay(2000);
         notifText.text = updatesObject.currentUpdate.updateDescription;
     }
 }
