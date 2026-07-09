@@ -36,4 +36,15 @@ public class UpdateData : ScriptableObject
         _currentUpdate = update;
         OnUpdate?.Invoke();
     }
+
+    // Inspector testing
+    private Updates _oldUpdate;
+    private void OnValidate()
+    {
+        if (!object.Equals(_currentUpdate, _oldUpdate))
+        {
+            _oldUpdate = _currentUpdate;
+            OnUpdate?.Invoke();
+        }
+    }
 }

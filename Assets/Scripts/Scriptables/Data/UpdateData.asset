@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98e648bca204db4fb745e58a9460736, type: 3}
   m_Name: UpdateData
   m_EditorClassIdentifier: Assembly-CSharp::UpdateData
+  _currentUpdate:
+    updateDescription: 
+    updateSpritePath: 
+    updateFlavorText: 

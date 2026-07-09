@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42379c4420faac941ab9c54f7655f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatePane
-  actionsPanePrefab: {fileID: 7838931470287256675, guid: 2dd111fd1962a8e4e93a8c4c519f77c5, type: 3}
+  actionsPanePrefab: {fileID: 6354071056391609073, guid: 2dd111fd1962a8e4e93a8c4c519f77c5, type: 3}
   actionsReference: {fileID: 11400000, guid: 71e1f2b2facb89247905507170584ab2, type: 2}
   parentTransform: {fileID: 0}
   listIndex: 0
