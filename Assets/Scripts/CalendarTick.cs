@@ -104,25 +104,30 @@ public class CalendarTick : MonoBehaviour
 
         Debug.Log($"[EVENT] {gEvent.eventTitle} triggered for {playerData.ClassName}. Money Multiplier: {moneyScale}x, Power Multiplier: {powerScale}x");
 
-        float moneyCharMultiplier = selectedCharacter.percentageMoneyModifier;
-        float militaryCharMultiplier = selectedCharacter.percentageMilitaryModifier;
-        float influenceCharMultiplier = selectedCharacter.percentageInfluenceModifier;
+        float moneyCharMultiplier       = selectedCharacter.percentageMoneyModifier;
+        float militaryCharMultiplier    = selectedCharacter.percentageMilitaryModifier;
+        float influenceCharMultiplier   = selectedCharacter.percentageInfluenceModifier;
 
-        long finalMoneyChange = (long)(Mathf.Abs(gEvent.moneyChange) * moneyScale * moneyCharMultiplier);
-        float finalMilitaryChange = Mathf.Abs(gEvent.militaryChange) * powerScale * militaryCharMultiplier;
-        float finalInfluenceChange = Mathf.Abs(gEvent.influenceChange) * powerScale * influenceCharMultiplier;
+        // Scale event changes with current class
+        float moneyScaled      = Mathf.Abs(gEvent.moneyChange) * moneyScale;
+        float militaryScaled   = Mathf.Abs(gEvent.militaryChange) * powerScale;
+        float influenceScaled  = Mathf.Abs(gEvent.influenceChange) * powerScale;
 
-        finalMoneyChange *= System.Math.Sign(gEvent.moneyChange);
-        finalMilitaryChange *= System.Math.Sign(gEvent.militaryChange);
-        finalInfluenceChange *= System.Math.Sign(gEvent.influenceChange);
+        // Adjust character modifier to invert when negative changes
+        float finalMoneyChange = moneyScaled >= 0
+        ? moneyScaled * moneyCharMultiplier
+        : moneyScaled * (2f - moneyCharMultiplier);
+        float finalMilitaryChange = moneyScaled >= 0
+        ? militaryScaled * militaryCharMultiplier
+        : militaryScaled * (2f - militaryCharMultiplier);
+        float finalInfluenceChange = moneyScaled >= 0
+        ? influenceScaled * influenceCharMultiplier
+        : influenceScaled * (2f - influenceCharMultiplier);
 
-        playerData.MoneyValue += (int)finalMoneyChange;
-        playerData.MilitaryValue += (int)finalMilitaryChange;
-        playerData.InfluenceValue += (int)finalInfluenceChange;
-
-        playerData.MoneyValue = Mathf.Max(0, playerData.MoneyValue);
-        playerData.MilitaryValue = Mathf.Max(0, playerData.MilitaryValue);
-        playerData.InfluenceValue = Mathf.Max(0, playerData.InfluenceValue);
+        // Make negative values 0
+        playerData.MoneyValue = Mathf.Max(0, playerData.MoneyValue + Mathf.RoundToInt(finalMoneyChange));
+        playerData.MilitaryValue = Mathf.Max(0, playerData.MilitaryValue + Mathf.RoundToInt(finalMilitaryChange));
+        playerData.InfluenceValue = Mathf.Max(0, playerData.InfluenceValue + Mathf.RoundToInt(finalInfluenceChange));
     }
 
     public void startElection()
