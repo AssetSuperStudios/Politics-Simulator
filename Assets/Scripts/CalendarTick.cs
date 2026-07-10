@@ -104,9 +104,9 @@ public class CalendarTick : MonoBehaviour
 
         Debug.Log($"[EVENT] {gEvent.eventTitle} triggered for {playerData.ClassName}. Money Multiplier: {moneyScale}x, Power Multiplier: {powerScale}x");
 
-        float moneyCharMultiplier = 1f + selectedCharacter.percentageMoneyModifier;
-        float militaryCharMultiplier = 1f + selectedCharacter.percentageMilitaryModifier;
-        float influenceCharMultiplier = 1f + selectedCharacter.percentageInfluenceModifier;
+        float moneyCharMultiplier = selectedCharacter.percentageMoneyModifier;
+        float militaryCharMultiplier = selectedCharacter.percentageMilitaryModifier;
+        float influenceCharMultiplier = selectedCharacter.percentageInfluenceModifier;
 
         long finalMoneyChange = (long)(Mathf.Abs(gEvent.moneyChange) * moneyScale * moneyCharMultiplier);
         float finalMilitaryChange = Mathf.Abs(gEvent.militaryChange) * powerScale * militaryCharMultiplier;
