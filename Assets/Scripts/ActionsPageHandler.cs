@@ -45,6 +45,13 @@ public class ActionsPageHandler : MonoBehaviour
             // Assign the game object and index location parent of script that creates the Actions Pane
             newButton.GetComponent<CreatePane>().actionsPanel = actionPanel;
             newButton.GetComponent<CreatePane>().listIndex = actionsReference.ActionList.IndexOf(action);
+            newButton.GetComponent<Button>().onClick.AddListener(() => {
+                bool success = action.actionFunctionCall.Invoke();
+                if (success)
+                {Debug.Log($"{action.actionName} executed successfully.");}
+                else
+                {Debug.Log($"Not enough resources for to execute {action.actionName}.");}
+            });
         }
     }
 }
