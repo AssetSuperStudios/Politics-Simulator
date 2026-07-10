@@ -8,6 +8,7 @@ public class CharacterSelector : MonoBehaviour
     [SerializeField] Image selectedImage;
     [SerializeField] TMP_Text selectedName;
     [SerializeField] TMP_Text selectedText;
+    [SerializeField] TMP_Text selectedStats;
     // Serialize CharacterStats List
     [SerializeField] CharacterStats[] characterList;
     // Serialize Data CharacterStats
@@ -57,11 +58,28 @@ public class CharacterSelector : MonoBehaviour
         selectedIndex = (selectedIndex + characterList.Length) % characterList.Length;
         selectedCharacter = characterList[selectedIndex];
 
+        var moneyNumber = TextColorChanger(selectedCharacter.percentageMoneyModifier);
+        var militaryNumber = TextColorChanger(selectedCharacter.percentageMilitaryModifier);
+        var influenceNumber = TextColorChanger(selectedCharacter.percentageInfluenceModifier);
+
+        var moneyLabel = "Money Modifier:";
+        var militaryLabel = "Military Modifier:";
+        var influenceLabel = "Influence Modifier:";
+
+        var textPad = Mathf.Max(moneyLabel.Length, militaryLabel.Length, influenceLabel.Length);
+
+        moneyLabel = moneyLabel.PadRight(textPad);
+        militaryLabel = militaryLabel.PadRight(textPad);
+        influenceLabel = influenceLabel.PadRight(textPad);
+
         selectedImage.sprite = selectedCharacter.spriteImage;
         selectedName.SetText(selectedCharacter.stringName);
-        selectedText.SetText($"Money Modifier: {selectedCharacter.percentageMoneyModifier}x \n" + 
-                            $"Military Modifier: {selectedCharacter.percentageMilitaryModifier}x \n" + 
-                            $"Influence Modifier: {selectedCharacter.percentageInfluenceModifier}x");
+        selectedText.SetText($"{moneyLabel}\n" + 
+                            $"{militaryLabel}\n" + 
+                            $"{influenceLabel}");
+        selectedStats.SetText($"{moneyNumber}\n" + 
+                            $"{militaryNumber}\n" + 
+                            $"{influenceNumber}");
         
         // Set the playerData to the selectedCharacter
         characterStats.spriteImage = selectedCharacter.spriteImage;
@@ -70,5 +88,25 @@ public class CharacterSelector : MonoBehaviour
         characterStats.percentageMoneyModifier = selectedCharacter.percentageMoneyModifier;
         characterStats.percentageMilitaryModifier = selectedCharacter.percentageMilitaryModifier;
         characterStats.percentageInfluenceModifier = selectedCharacter.percentageInfluenceModifier;
+    }
+
+    string TextColorChanger(float modifierValue)
+    {
+        var textColor = "";
+
+        switch (modifierValue)
+        {
+            case (1f):
+                textColor = $"{modifierValue}x";
+                break;
+            case (> 1f):
+                textColor = $"<color=#00a86b>{modifierValue}</color>x";
+                break;
+            case (< 1f):
+                textColor = $"<color=red>{modifierValue}</color>x";
+                break;
+        }
+
+        return textColor;
     }
 }

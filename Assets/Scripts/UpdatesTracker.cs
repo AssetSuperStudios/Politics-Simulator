@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using System.Threading.Tasks;
 
 public class UpdatesTracker : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class UpdatesTracker : MonoBehaviour
 
     private string spriteLocation = "Sprites/Icons/Updates";
 
+    void Start()
+    {
+        NewUpdates();
+    }
+
     void OnEnable()
     {
         UpdateData.OnUpdate += NewUpdates;
@@ -20,13 +26,14 @@ public class UpdatesTracker : MonoBehaviour
 
     void OnDisable()
     {
-        UpdateData.OnUpdate += NewUpdates;
+        UpdateData.OnUpdate -= NewUpdates;
     }
 
-    void NewUpdates()
+    async void NewUpdates()
     {
-        notifText.text = updatesObject.updateDescription;
-        updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.updateSpritePath}");
-        updatesText.text = updatesObject.updateFlavorText;
+        updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.currentUpdate.updateSpritePath}");
+        updatesText.text = updatesObject.currentUpdate.updateFlavorText;
+        await Task.Delay(2000);
+        notifText.text = updatesObject.currentUpdate.updateDescription;
     }
 }
