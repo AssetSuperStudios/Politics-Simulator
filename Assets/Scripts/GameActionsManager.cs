@@ -81,26 +81,20 @@ public class GameActionsManager : MonoBehaviour
         float militaryCharMultiplier = selectedCharacter.percentageMilitaryModifier;
         float influenceCharMultiplier = selectedCharacter.percentageInfluenceModifier;
 
-        // All math handles ints safely using Mathf.RoundToInt
-        int finalMoneyChange = Mathf.RoundToInt(Mathf.Abs(action.resourceMoney) * moneyCharMultiplier) * System.Math.Sign(action.resourceMoney);
-        int finalMilitaryChange = Mathf.RoundToInt(Mathf.Abs(action.resourceMilitary) * militaryCharMultiplier) * System.Math.Sign(action.resourceMilitary);
-        int finalInfluenceChange = Mathf.RoundToInt(Mathf.Abs(action.resourceInfluence) * influenceCharMultiplier) * System.Math.Sign(action.resourceInfluence);
+        // Adjust character modifier to invert when negative changes
+        float finalMoneyChange = action.resourceMoney >= 0
+        ? action.resourceMoney * moneyCharMultiplier
+        : action.resourceMoney * (2f - moneyCharMultiplier);
+        float finalMilitaryChange = action.resourceMilitary >= 0
+        ? action.resourceMilitary * militaryCharMultiplier
+        : action.resourceMilitary * (2f - militaryCharMultiplier);
+        float finalInfluenceChange = action.resourceInfluence >= 0
+        ? action.resourceInfluence * influenceCharMultiplier
+        : action.resourceInfluence * (2f - influenceCharMultiplier);
 
-        playerData.MoneyValue += finalMoneyChange;
-        playerData.MilitaryValue += finalMilitaryChange;
-
-        if (playerData.InfluenceValue + finalInfluenceChange > DataTracker.maxInfluence)
-        {
-            playerData.InfluenceValue = DataTracker.maxInfluence;
-        }
-        else
-        {
-            playerData.InfluenceValue += finalInfluenceChange;
-        }
-
-        playerData.MoneyValue = Mathf.Max(0, playerData.MoneyValue);
-        playerData.MilitaryValue = Mathf.Max(0, playerData.MilitaryValue);
-        playerData.InfluenceValue = Mathf.Max(0, playerData.InfluenceValue);
+        playerData.MoneyValue = Mathf.Max(0, playerData.MoneyValue + Mathf.RoundToInt(finalMoneyChange));
+        playerData.MilitaryValue = Mathf.Max(0, playerData.MilitaryValue + Mathf.RoundToInt(finalMoneyChange));
+        playerData.InfluenceValue = Mathf.Min(Mathf.Max(0, playerData.InfluenceValue + Mathf.RoundToInt(finalMoneyChange)), DataTracker.maxInfluence);
 
         if (calendarTick != null)
         {
@@ -108,7 +102,7 @@ public class GameActionsManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("CalendarTick runtime script instance reference missing from manager inspector slot!");
+            Debug.LogError("CalendarTick runtime script instance reference missing from inspector slot!");
         }
 
         return true;
