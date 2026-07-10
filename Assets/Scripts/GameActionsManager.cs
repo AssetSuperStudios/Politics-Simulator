@@ -77,9 +77,9 @@ public class GameActionsManager : MonoBehaviour
 
         Debug.Log($"Executing action: {action.actionName}...");
 
-        float moneyCharMultiplier = 1f + selectedCharacter.percentageMoneyModifier;
-        float militaryCharMultiplier = 1f + selectedCharacter.percentageMilitaryModifier;
-        float influenceCharMultiplier = 1f + selectedCharacter.percentageInfluenceModifier;
+        float moneyCharMultiplier = selectedCharacter.percentageMoneyModifier;
+        float militaryCharMultiplier = selectedCharacter.percentageMilitaryModifier;
+        float influenceCharMultiplier = selectedCharacter.percentageInfluenceModifier;
 
         // All math handles ints safely using Mathf.RoundToInt
         int finalMoneyChange = Mathf.RoundToInt(Mathf.Abs(action.resourceMoney) * moneyCharMultiplier) * System.Math.Sign(action.resourceMoney);
