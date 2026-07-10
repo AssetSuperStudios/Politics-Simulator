@@ -93,8 +93,8 @@ public class GameActionsManager : MonoBehaviour
         : action.resourceInfluence * (2f - influenceCharMultiplier);
 
         playerData.MoneyValue = Mathf.Max(0, playerData.MoneyValue + Mathf.RoundToInt(finalMoneyChange));
-        playerData.MilitaryValue = Mathf.Max(0, playerData.MilitaryValue + Mathf.RoundToInt(finalMoneyChange));
-        playerData.InfluenceValue = Mathf.Min(Mathf.Max(0, playerData.InfluenceValue + Mathf.RoundToInt(finalMoneyChange)), DataTracker.maxInfluence);
+        playerData.MilitaryValue = Mathf.Max(0, playerData.MilitaryValue + Mathf.RoundToInt(finalMilitaryChange));
+        playerData.InfluenceValue = Mathf.Min(Mathf.Max(0, playerData.InfluenceValue + Mathf.RoundToInt(finalInfluenceChange)), DataTracker.maxInfluence);
 
         if (calendarTick != null)
         {
