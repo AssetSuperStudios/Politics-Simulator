@@ -1,7 +1,12 @@
+// FRONT END
+
 using UnityEngine;
+// Assets/Prefabs/AudioSourcePrefab.prefab [Universal]
+// Attach this to any GameObject that needs to be persistent across scenes
 
 public class PersistentObject : MonoBehaviour
 {
+    // Declare int and PersistentObject
     public int index;
     private static PersistentObject instance;
 

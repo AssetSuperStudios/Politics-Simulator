@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: UpdateData
   m_EditorClassIdentifier: Assembly-CSharp::UpdateData
   _currentUpdate:
-    updateDescription: a
-    updateSpritePath: 
-    updateFlavorText: aaaaaaaaaaa
+    updateDescription: Successful action!
+    updateSpritePath: hire_police
+    updateFlavorText: Hire police to increase safety.

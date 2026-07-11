@@ -18,7 +18,7 @@ MonoBehaviour:
   _influenceValue: 50
   _satisfactionPercentage: 2
   _safetyPercentage: 2
-  _timeDay: 67
+  _timeDay: 4
   _timeYear: 1
   _loseStatus: 0
   _locationIndex: 0

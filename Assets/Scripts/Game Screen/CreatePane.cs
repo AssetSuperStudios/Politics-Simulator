@@ -1,43 +1,43 @@
+// FRONT END
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+// Assets/Prefabs/ButtonActionPrefab.prefab [Game Screen]
+// Attach this to the GameObject that when hovered upon, sets the Action Panel contents
 
 public class CreatePane : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    // Serialize Actions List and Actions Pane Prefab
+    // Serialize Actions List
     [SerializeField] private Actions actionsReference;
-    // Declare game object and integer which is assigned on button creation
+    // Declare Game Object and integer which is assigned on button creation
     public GameObject actionsPanel;
     public int listIndex;
 
+    // Ran when the cursor hovers on this object
+    // Sets the contents of the Actions Panel
+    // Then reveals and makes the panel interactable
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Set the values of the Actions Pane based on the action in the index selected
+        // Look for each component in the hierarchy
+        // Then set the values of the Actions Pane based on the action in the index selected
         var action = actionsReference.ActionList[listIndex];
-        actionsPanel.transform.Find("ButtonAction/TextBoundingBox/TextActionName").GetComponent<TMP_Text>().text = action.actionName;
+        actionsPanel.transform.Find("TitleBoundaryBox/TextBoundingBox/TextActionName").GetComponent<TMP_Text>().text = action.actionName;
         actionsPanel.transform.Find("ResourcesHolder/MilitaryHolder/TextMoney").GetComponent<TMP_Text>().text = action.resourceMilitary.ToString();
         actionsPanel.transform.Find("ResourcesHolder/InfluenceHolder/TextInfluence").GetComponent<TMP_Text>().text = action.resourceInfluence.ToString();
         actionsPanel.transform.Find("ResourcesHolder/MoneyHolder/TextMoney").GetComponent<TMP_Text>().text = action.resourceMoney.ToString();
         actionsPanel.transform.Find("ResourcesHolder/TimeHolder/TextTime").GetComponent<TMP_Text>().text = action.resourceTime.ToString();
         actionsPanel.transform.Find("TextDescription").GetComponent<TMP_Text>().text = action.actionDescription;
-        // actionsPane.transform.Find("ButtonAction").GetComponent<Button>().onClick.AddListener(() => {
-        //     bool success = action.actionFunctionCall.Invoke();
-        //     if (success)
-        //     {
-        //         Debug.Log($"{action.actionName} executed successfully.");
-        //         Destroy(actionsPane, 0.2f);
-        //     }
-        //     else
-        //     {
-        //         Debug.Log($"Not enough resources for to execute {action.actionName}.");
-        //     }
-        // });
+        
+        // Reveals and makes the panel interactable
         actionsPanel.GetComponent<CanvasGroup>().alpha = 1;
         actionsPanel.GetComponent<CanvasGroup>().interactable = true;
         actionsPanel.GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
+    // Ran when the cursor stops hovering on this object
+    // Hides the panel and makes the panel not interactable
     public void OnPointerExit(PointerEventData eventData)
     {
         actionsPanel.GetComponent<CanvasGroup>().alpha = 0;

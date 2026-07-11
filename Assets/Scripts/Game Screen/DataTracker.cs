@@ -1,34 +1,40 @@
+// FRONT END
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+// Game Screen : CanvasGameScreen/DataHolder
+// Attach this to the GameObject that holds the objects that track the game's main resources data
 
 public class DataTracker : MonoBehaviour
 {
     // Serialize Data Scriptable Object
-    [SerializeField] private Data playerData;
+    [SerializeField] private Data playerData;                   // Assets/Scripts/Scriptables/Data/PlayerData.cs
     // Serialize UI trackers
-    [SerializeField] private TMP_Text classText;
-    [SerializeField] private TMP_Text moneyText;
-    [SerializeField] private TMP_Text militaryText;
-    [SerializeField] private TMP_Text influenceText;
-    [SerializeField] private Image satisfactionImage;
-    [SerializeField] private Image safetyImage;
-    [SerializeField] private TMP_Text timeText;
-    [SerializeField] private TMP_Text yearText;
-    [SerializeField] private GameObject buttonHolder;
-    // Serialize CharacterStats and Declare string path
-    [SerializeField] private CharacterStats selectedCharacter;
+    [SerializeField] private TMP_Text classText;                // Game Screen : CanvasGameScreen/DataHolder/SafetyHolder/TextClass
+    [SerializeField] private TMP_Text moneyText;                // Game Screen : CanvasGameScreen/DataHolder/ResourcesHolder/MoneyHolder/TextBoundingBox/TextMoneyValue
+    [SerializeField] private TMP_Text militaryText;             // Game Screen : CanvasGameScreen/DataHolder/ResourcesHolder/MilitaryHolder/TextBoundingBox/TextMilitaryValue
+    [SerializeField] private TMP_Text influenceText;            // Game Screen : CanvasGameScreen/DataHolder/ResourcesHolder/InfluenceHolder/TextBoundingBox/TextInfluenceValue
+    [SerializeField] private Image satisfactionImage;           // Game Screen : CanvasGameScreen/DataHolder/SatisfactionHolder/ImageSatisfaction
+    [SerializeField] private Image safetyImage;                 // Game Screen : CanvasGameScreen/DataHolder/SafetyHolder/ImageCharacter
+    [SerializeField] private TMP_Text timeText;                 // Game Screen : CanvasGameScreen/DataHolder/CalendarHolder/TextTime
+    [SerializeField] private TMP_Text yearText;                 // Game Screen : CanvasGameScreen/DataHolder/CalendarHolder/TextYear
+    // Serialize CharacterStats
+    [SerializeField] private CharacterStats selectedCharacter;  // Assets/Scripts/Scriptables/Data/SelectedCharacter.cs
+    // Declare string and int used in the resource tracking
     private string safetySpritePath;
     [SerializeField] public static int maxInfluence = 680;
     [SerializeField] public static int daysInYear = 360;
 
-    // Change data value on start
+    // Set the values on start
+    // Calls MoneyChange(), MilitaryChange(), InfluenceChange(), SatisfactionChange(), SafetyChange(), TimeChange(), YearChange(), and LoseStatusChange()
     void Start()
     {
         // Initialize string path for Safety sprites after loading CharacterStats
         safetySpritePath = $"Sprites/Icons/Safety/{selectedCharacter.stringPath}";
 
+        // Call each change manager and set its value
         ClassChange(playerData.ClassName);
         MoneyChange(playerData.MoneyValue);
         MilitaryChange(playerData.MilitaryValue);
@@ -67,102 +73,11 @@ public class DataTracker : MonoBehaviour
         playerData.OnLoseStatusChanged -= LoseStatusChange;
     }
 
+    // Changes the class name, money value, military value, influence value, satisfaction value, safety value, day and year times, and the lose status
+    // In that order
     void ClassChange(string newClassName)
     {
         classText.text = newClassName;
-        var tempList = buttonHolder.GetComponentsInChildren<Button>();
-        var tempCount = 0;
-        switch (newClassName)
-        {
-            case ("Mayor"):
-                foreach (var buttonItem in tempList)
-                {
-                    if (tempCount < 3)
-                    {
-                        buttonItem.interactable = true;
-                    } else
-                    {
-                        buttonItem.interactable = false;
-                    }
-
-                    tempCount++;
-                }
-                break;
-            case ("Governor"):
-                foreach (var buttonItem in tempList)
-                {
-                    if (tempCount < 4)
-                    {
-                        buttonItem.interactable = true;
-                    } else
-                    {
-                        buttonItem.interactable = false;
-                    }
-
-                    tempCount++;
-                }
-                break;
-            case ("Congress"):
-                foreach (var buttonItem in tempList)
-                {
-                    if (tempCount < 5)
-                    {
-                        buttonItem.interactable = true;
-                    } else
-                    {
-                        buttonItem.interactable = false;
-                    }
-
-                    tempCount++;
-                }
-                break;
-            case ("Senator"):
-                foreach (var buttonItem in tempList)
-                {
-                    if (tempCount < 6)
-                    {
-                        buttonItem.interactable = true;
-                    } else
-                    {
-                        buttonItem.interactable = false;
-                    }
-
-                    tempCount++;
-                }
-                break;
-            case ("VP"):
-                foreach (var buttonItem in tempList)
-                {
-                    if (tempCount < 7)
-                    {
-                        buttonItem.interactable = true;
-                    } else
-                    {
-                        buttonItem.interactable = false;
-                    }
-
-                    tempCount++;
-                }
-                break;
-            case ("President"):
-                foreach (var buttonItem in tempList)
-                {
-                    if (tempCount < 8)
-                    {
-                        buttonItem.interactable = true;
-                    } else
-                    {
-                        buttonItem.interactable = false;
-                    }
-
-                    tempCount++;
-                }
-                break;
-            default:
-                Debug.LogError("That class does not exist.");
-                break;
-        }
-
         Debug.Log($"Class Name changed to: {newClassName}");
     }
     void MoneyChange(int newMoneyValue)
