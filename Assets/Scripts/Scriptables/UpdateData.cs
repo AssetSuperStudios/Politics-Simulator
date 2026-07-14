@@ -17,6 +17,10 @@ public struct Updates
     /// Flavor text accompanying the update.
     /// </summary>
     public string updateFlavorText;
+    /// <summary>
+    /// Tells whether the update is an event or not.
+    /// </summary>
+    public Boolean isEvent;
 }
 
 [CreateAssetMenu(fileName = "UpdateData", menuName = "Scriptable Objects/UpdateData")]
