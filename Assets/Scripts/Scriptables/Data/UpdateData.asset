@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: UpdateData
   m_EditorClassIdentifier: Assembly-CSharp::UpdateData
   _currentUpdate:
-    updateDescription: a
-    updateSpritePath: 
-    updateFlavorText: aaaaaaaaaaa
+    updateDescription: Successful action!
+    updateSpritePath: build_farm
+    updateFlavorText: Organize a sports festival to boost morale and safety.
+    updateType: 0
+    updateOptionOne: 
+    updateOptionTwo: 
+    updateAuthorName: 

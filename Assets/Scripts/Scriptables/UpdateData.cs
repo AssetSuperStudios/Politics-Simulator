@@ -17,7 +17,28 @@ public struct Updates
     /// Flavor text accompanying the update.
     /// </summary>
     public string updateFlavorText;
+    /// <summary>
+    /// Tells whether the update is an event or not.
+    /// </summary>
+
+    // TEMP TESTING //
+    public UpdateType updateType;
+    public string updateOptionOne;
+    public string updateOptionTwo;
+    public Action updateFunctionOne;
+    public Action updateFunctionTwo;
+    public string updateAuthorName;
+    // TEMP TESTING //
 }
+
+// TEMP TESTING //
+public enum UpdateType
+{
+    action,
+    eventBase,
+    eventChoice
+}
+// TEMP TESTING //
 
 [CreateAssetMenu(fileName = "UpdateData", menuName = "Scriptable Objects/UpdateData")]
 public class UpdateData : ScriptableObject
