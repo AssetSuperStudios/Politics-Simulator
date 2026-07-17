@@ -20,8 +20,25 @@ public struct Updates
     /// <summary>
     /// Tells whether the update is an event or not.
     /// </summary>
-    public Boolean isEvent;
+
+    // TEMP TESTING //
+    public UpdateType updateType;
+    public string updateOptionOne;
+    public string updateOptionTwo;
+    public Action updateFunctionOne;
+    public Action updateFunctionTwo;
+    public string updateAuthorName;
+    // TEMP TESTING //
 }
+
+// TEMP TESTING //
+public enum UpdateType
+{
+    action,
+    eventBase,
+    eventChoice
+}
+// TEMP TESTING //
 
 [CreateAssetMenu(fileName = "UpdateData", menuName = "Scriptable Objects/UpdateData")]
 public class UpdateData : ScriptableObject

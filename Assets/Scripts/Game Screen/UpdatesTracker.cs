@@ -3,9 +3,8 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System;
 using TMPro;
-using Unity.VisualScripting;
-using System.Threading.Tasks;
 // Game Screen : CanvasGameScreen/UpdatesHolder
 // Attach this to the GameObject that holds the objects that track the game's update data
 
@@ -13,9 +12,12 @@ public class UpdatesTracker : MonoBehaviour
 {
     // Serialize Data Scriptable Object
     [SerializeField] private UpdateData updatesObject;  // Assets/Scripts/Scriptables/Data/UpdateData.cs
+    // Serialize script component that handles the Newspaper Functions
+    [SerializeField] private NewspaperTracker newspaperScript; // Game Screen : CanvasGameScreen/NewspaperHolder
     // Serialize UI trackers
     [SerializeField] private TMP_Text notifText;        // Game Screen : CanvasGameScreen/UpdatesHolder/NotifBoundaryBox/TextBoundaryBox/TextNotifOne
-    [SerializeField] private TMP_Text updatesText;      // Game Screen : CanvasGameScreen/UpdatesHolder/ItemBoundaryBox/TextUpdate
+    [SerializeField] private TMP_Text updatesAuthor;      // Game Screen : CanvasGameScreen/UpdatesHolder/ItemBoundaryBox/TextBoundaryBox/TextUpdateSubtitle
+    [SerializeField] private TMP_Text updatesText;      // Game Screen : CanvasGameScreen/UpdatesHolder/ItemBoundaryBox/TextBoundaryBox/TextUpdate
     [SerializeField] private Image updatesImage;        // Game Screen : CanvasGameScreen/UpdatesHolder/ItemBoundaryBox/ImageIcon
     // Declare audio component
     private AudioSource playAudio;
@@ -37,13 +39,41 @@ public class UpdatesTracker : MonoBehaviour
     void OnDisable()
     {UpdateData.OnUpdate -= NewUpdates;}
 
-    // Changes the contents of the Updates Tab based on the new values that Update Data receives
+    // Manage the functions called based on the type of update, the event listener receives
+    // Generally changes the contents of the Updates and Events Pop Up based on the new values that Update Data receives
     void NewUpdates()
     {
-        if (updatesObject.currentUpdate.isEvent) {playAudio.Play();}
+        // Check what type of update it is
+        switch (updatesObject.currentUpdate.updateType) {
+            // Is it a base event
+            case UpdateType.eventBase:
+                playAudio.Play();
+                newspaperScript.EventPopup(false, UpdatesPopup);
+                break;
+            // Is it a choice event
+            case UpdateType.eventChoice:
+                playAudio.Play();
+                newspaperScript.EventPopup(true, UpdatesPopup);
+                break;
+            // Is it an action
+            case UpdateType.action:
+                UpdatesPopup(true);
+                break;
+            // Wrong update type
+            default:
+                Debug.LogWarning($"update type '{updatesObject.currentUpdate.updateType}' unknown");
+                break;
+        }
+    }
 
+    public void UpdatesPopup(Boolean isAction)
+    {
         notifText.text = updatesObject.currentUpdate.updateDescription;
-        updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.currentUpdate.updateSpritePath}");
-        updatesText.text = updatesObject.currentUpdate.updateFlavorText;
+        if (!isAction)
+        {
+            updatesImage.sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.currentUpdate.updateSpritePath}");
+            updatesAuthor.text = $"Philippines | National <pos=50%>{updatesObject.currentUpdate.updateAuthorName}</pos>";
+            updatesText.text = updatesObject.currentUpdate.updateFlavorText;
+        }
     }
 }
