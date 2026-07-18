@@ -1,19 +1,18 @@
 // FRONT END
 
 using UnityEngine;
-using UnityEngine.UI;
 // Assets/Prefabs/SettingsPrefab.prefab/MainSettingsHolder/ButtonExit [Universal]
-// Main Menu : CanvasMenu/ButtonSettings
-// Character Select : CanvasCharacterSelect/ButtonSettings
-// Game Screen : CanvasGameScreen/ButtonSettings
-// Lose Scene : CanvasLose/ButtonSettings
-// Win Scene : CanvasWin/ButtonSettings
-// Attach this to a Button GameObject that opens the Settings Menu
+// Main Menu : CanvasMenu/ButtonSettings                        [OpenMenu : CanvasSettings]
+// Character Select : CanvasCharacterSelect/ButtonSettings      [OpenMenu : CanvasSettings]
+// Game Screen : CanvasGameScreen/ButtonSettings                [OpenMenu : CanvasSettings]
+// Lose Scene : CanvasLose/ButtonSettings                       [OpenMenu : CanvasSettings]
+// Win Scene : CanvasWin/ButtonSettings                         [OpenMenu : CanvasSettings]
+// Attach this to a Button GameObject that opens or closes a Menu
 
 public class OpenSettings : MonoBehaviour
 {
     // Called by a button click
-    // Reveals the settings canvas and makes it interactable
+    // Reveals the parameter canvas and makes it interactable
     public void OpenMenu(CanvasGroup canvasSettings)
     {
         canvasSettings.alpha = 1;
@@ -23,7 +22,7 @@ public class OpenSettings : MonoBehaviour
     }
 
     // Called by a button click
-    // Hides the settings canvas and makes it uninteractable
+    // Hides the parameter canvas and makes it uninteractable
     public void CloseMenu(CanvasGroup canvasSettings)
     {
         canvasSettings.alpha = 0;

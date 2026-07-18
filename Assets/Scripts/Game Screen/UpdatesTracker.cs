@@ -33,9 +33,11 @@ public class UpdatesTracker : MonoBehaviour
     }
 
     // Sets up OnUpdate event listener for Update Data in the scene
+    // Calls NewUpdates()
     void OnEnable()
     {UpdateData.OnUpdate += NewUpdates;}
     // Removes OnUpdate event listener for Update Data in the scene
+    // Calls NewUpdates()
     void OnDisable()
     {UpdateData.OnUpdate -= NewUpdates;}
 

@@ -17,7 +17,6 @@ public class NewspaperClose : MonoBehaviour
     // It then calls the UpdatesPopup function to change the Updates Pop Up values
     public void CloseMenu()
     {
-        Debug.Log("Called");
         canvasSettings.alpha = 0;
         canvasSettings.interactable = false;
         canvasSettings.blocksRaycasts = false;

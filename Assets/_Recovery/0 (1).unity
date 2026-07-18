@@ -1343,7 +1343,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 575592664}
+    m_TransformParent: {fileID: 1703294206}
     m_Modifications:
     - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_TargetGraphic
@@ -1431,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_Name
-      value: Evil
+      value: ButtonTxtPrefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2125362293942246154, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_text
@@ -1491,23 +1491,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00015258789
+      value: 568.0001
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -72
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2042,43 +2042,43 @@ MonoBehaviour:
     was never in danger," one anonymous spokesperson said while standing knee-deep
     in floodwater. "Mission accomplished."
 
+    
 
+    Residents were reportedly
+    amazed after discovering that several completed "flood control projects" had
+    become invisible during the storm.
 
-    Residents were reportedly amazed
-    after discovering that several completed "flood control projects" had become
-    invisible during the storm.
+    
 
+    "I''ve heard of ghost employees,"
+    said one commuter stranded on a floating jeepney. "But ghost drainage canals?
+    That''s next-level innovation."
 
+    
 
-    "I''ve heard of ghost employees," said one
-    commuter stranded on a floating jeepney. "But ghost drainage canals? That''s
-    next-level innovation."
+    The Department of Imaginary Infrastructure
+    clarified that the missing drainage systems were part of a revolutionary Stealth
+    Flood Management Program, explaining that citizens simply "lack the vision" to
+    see them.
 
+    
 
+    Meanwhile, engineers pointed to a newly constructed drainage
+    canal on official documents that, according to local residents, currently serves
+    as "an excellent fishing spot because it doesn''t exist."
 
-    The Department of Imaginary Infrastructure clarified
-    that the missing drainage systems were part of a revolutionary Stealth Flood
-    Management Program, explaining that citizens simply "lack the vision" to see
-    them.
+    
 
-
-
-    Meanwhile, engineers pointed to a newly constructed drainage canal
-    on official documents that, according to local residents, currently serves as
-    "an excellent fishing spot because it doesn''t exist."
-
-
-
-    Traffic reached
-    historic levels after major roads transformed into temporary rivers, prompting
-    ride-hailing apps to introduce a new vehicle category:
+    Traffic
+    reached historic levels after major roads transformed into temporary rivers,
+    prompting ride-hailing apps to introduce a new vehicle category:
 
     Boat (Economy).
 
     One
     commuter shared his appreciation.
 
-
+    
 
     "I left for work at 7 AM and arrived
     just in time for tomorrow."
@@ -2087,11 +2087,11 @@ MonoBehaviour:
     wearing spotless boots and life jackets for photo opportunities before departing
     in helicopters due to "unexpected water."
 
+    
 
-
-    Experts predict that if flooding
-    continues, Metro Manila may soon qualify as Southeast Asia''s newest island-hopping
-    destination.'
+    Experts predict that if
+    flooding continues, Metro Manila may soon qualify as Southeast Asia''s newest
+    island-hopping destination.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a34e75096667488a027fec7939ea8, type: 2}
   m_sharedMaterial: {fileID: -3416384718526908630, guid: 187a34e75096667488a027fec7939ea8, type: 2}
@@ -2498,8 +2498,6 @@ GameObject:
   - component: {fileID: 400470186}
   - component: {fileID: 400470188}
   - component: {fileID: 400470187}
-  - component: {fileID: 400470189}
-  - component: {fileID: 400470190}
   m_Layer: 5
   m_Name: CampaignHolder
   m_TagString: Untagged
@@ -2555,362 +2553,13 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &400470189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400470185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086fb96fb5459bc4fa8610d333e3ef1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CampaignTracker
-  newCampaign:
-    militaryRank: 0
-    influenceRank: 0
-    moneyRank: 0
-    overallRank: 0
---- !u!82 &400470190
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400470185}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -2005085036905498264, guid: a778acbdaac56ed44a751c83eb4bf6e7, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5671335d2d36d864ab5b6b3557cfcd3d, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!1001 &402621911
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1345922077}
-    m_Modifications:
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 400470189}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 442418954}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CampaignStart
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActiveLayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: CampaignTracker, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: AnimationController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107601031771191686, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1656199925213004219, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1656199925213004219, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1656199925213004219, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1656199925213004219, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_Name
-      value: Campaign
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125362293942246154, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_text
-      value: Test Campaign
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125362293942246154, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_fontSize
-      value: 28.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 299.3207
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 19.911255
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -153.8363
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5282983736604192985, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AspectRatio
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556979633955390564, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471059397137056999, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471059397137056999, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471059397137056999, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471059397137056999, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759133809808963163, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759133809808963163, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759133809808963163, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759133809808963163, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5988364193937632434, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
---- !u!224 &402621912 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
-  m_PrefabInstance: {fileID: 402621911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &406997903
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 575592664}
+    m_TransformParent: {fileID: 1703294206}
     m_Modifications:
     - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_TargetGraphic
@@ -2998,7 +2647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_Name
-      value: Neutral
+      value: ButtonTxtPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2125362293942246154, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_text
@@ -3058,23 +2707,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00015258789
+      value: 568.0001
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.0000637
+      value: 403
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3498,7 +3147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628631823369346834, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -156.10571
+      value: -228
       objectReference: {fileID: 0}
     - target: {fileID: 753517114675505709, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3706,7 +3355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080588665799112591, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -156.10571
+      value: -228
       objectReference: {fileID: 0}
     - target: {fileID: 4222345829476138012, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_Alpha
@@ -3922,7 +3571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8244598197796969790, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -156.10571
+      value: -228
       objectReference: {fileID: 0}
     - target: {fileID: 8312565770892740068, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_Size
@@ -4341,44 +3990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4411d566ce419ad4b968a0453fcb82c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlideAnimation
---- !u!1 &575592663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575592664}
-  m_Layer: 5
-  m_Name: KarmaButtons
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &575592664
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575592663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1536400826}
-  - {fileID: 406997904}
-  - {fileID: 268868313}
-  m_Father: {fileID: 2000786963}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 316.49997, y: 3.2407684}
-  m_SizeDelta: {x: 350, y: 214.00009}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &580757189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6065,43 +5676,43 @@ MonoBehaviour:
     was never in danger," one anonymous spokesperson said while standing knee-deep
     in floodwater. "Mission accomplished."
 
+    
 
+    Residents were reportedly
+    amazed after discovering that several completed "flood control projects" had
+    become invisible during the storm.
 
-    Residents were reportedly amazed
-    after discovering that several completed "flood control projects" had become
-    invisible during the storm.
+    
 
+    "I''ve heard of ghost employees,"
+    said one commuter stranded on a floating jeepney. "But ghost drainage canals?
+    That''s next-level innovation."
 
+    
 
-    "I''ve heard of ghost employees," said one
-    commuter stranded on a floating jeepney. "But ghost drainage canals? That''s
-    next-level innovation."
+    The Department of Imaginary Infrastructure
+    clarified that the missing drainage systems were part of a revolutionary Stealth
+    Flood Management Program, explaining that citizens simply "lack the vision" to
+    see them.
 
+    
 
+    Meanwhile, engineers pointed to a newly constructed drainage
+    canal on official documents that, according to local residents, currently serves
+    as "an excellent fishing spot because it doesn''t exist."
 
-    The Department of Imaginary Infrastructure clarified
-    that the missing drainage systems were part of a revolutionary Stealth Flood
-    Management Program, explaining that citizens simply "lack the vision" to see
-    them.
+    
 
-
-
-    Meanwhile, engineers pointed to a newly constructed drainage canal
-    on official documents that, according to local residents, currently serves as
-    "an excellent fishing spot because it doesn''t exist."
-
-
-
-    Traffic reached
-    historic levels after major roads transformed into temporary rivers, prompting
-    ride-hailing apps to introduce a new vehicle category:
+    Traffic
+    reached historic levels after major roads transformed into temporary rivers,
+    prompting ride-hailing apps to introduce a new vehicle category:
 
     Boat (Economy).
 
     One
     commuter shared his appreciation.
 
-
+    
 
     "I left for work at 7 AM and arrived
     just in time for tomorrow."
@@ -6110,11 +5721,11 @@ MonoBehaviour:
     wearing spotless boots and life jackets for photo opportunities before departing
     in helicopters due to "unexpected water."
 
+    
 
-
-    Experts predict that if flooding
-    continues, Metro Manila may soon qualify as Southeast Asia''s newest island-hopping
-    destination.'
+    Experts predict that if
+    flooding continues, Metro Manila may soon qualify as Southeast Asia''s newest
+    island-hopping destination.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a34e75096667488a027fec7939ea8, type: 2}
   m_sharedMaterial: {fileID: -3416384718526908630, guid: 187a34e75096667488a027fec7939ea8, type: 2}
@@ -6969,7 +6580,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1345922077}
+    m_TransformParent: {fileID: 1703294206}
     m_Modifications:
     - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_TargetGraphic
@@ -7057,7 +6668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_Name
-      value: Election
+      value: ButtonTxtPrefab (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2125362293942246154, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_text
@@ -7093,7 +6704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 299.3207
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -7117,23 +6728,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.911255
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 25.409973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7884,43 +7495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344732347}
   m_CullTransparentMesh: 1
---- !u!1 &1345922076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1345922077}
-  m_Layer: 5
-  m_Name: ElectionButtons
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1345922077
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345922076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1245324125}
-  - {fileID: 402621912}
-  m_Father: {fileID: 2000786963}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491.50006, y: -14.9907875}
-  m_SizeDelta: {x: 159.29004, y: 233.50232}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1349663281
 GameObject:
   m_ObjectHideFlags: 0
@@ -8589,7 +8163,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 575592664}
+    m_TransformParent: {fileID: 1703294206}
     m_Modifications:
     - target: {fileID: 56619747824956186, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_TargetGraphic
@@ -8669,7 +8243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1771549351947118231, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_Name
-      value: Good
+      value: ButtonTxtPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 2125362293942246154, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_text
@@ -8729,23 +8303,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00015258789
+      value: 568
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 72.00009
+      value: 477
       objectReference: {fileID: 0}
     - target: {fileID: 4794979774700358118, guid: e86f0ec624025b84494e821ac8f4991b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10064,15 +9638,24 @@ PrefabInstance:
       addedObject: {fileID: 1332289222}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 2000786963}
+      addedObject: {fileID: 1536400826}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: 5
-      addedObject: {fileID: 1539494403}
+      addedObject: {fileID: 406997904}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: 6
-      addedObject: {fileID: 1476456359}
+      addedObject: {fileID: 268868313}
     - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
       insertIndex: 7
+      addedObject: {fileID: 1245324125}
+    - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 1539494403}
+    - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      insertIndex: 9
+      addedObject: {fileID: 1476456359}
+    - targetCorrespondingSourceObject: {fileID: 6312367306266415043, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
+      insertIndex: 10
       addedObject: {fileID: 400470186}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7562142601296067042, guid: 1ca78dd0987d53346a2e809528ae7169, type: 3}
@@ -10444,43 +10027,43 @@ MonoBehaviour:
     was never in danger," one anonymous spokesperson said while standing knee-deep
     in floodwater. "Mission accomplished."
 
+    
 
+    Residents were reportedly
+    amazed after discovering that several completed "flood control projects" had
+    become invisible during the storm.
 
-    Residents were reportedly amazed
-    after discovering that several completed "flood control projects" had become
-    invisible during the storm.
+    
 
+    "I''ve heard of ghost employees,"
+    said one commuter stranded on a floating jeepney. "But ghost drainage canals?
+    That''s next-level innovation."
 
+    
 
-    "I''ve heard of ghost employees," said one
-    commuter stranded on a floating jeepney. "But ghost drainage canals? That''s
-    next-level innovation."
+    The Department of Imaginary Infrastructure
+    clarified that the missing drainage systems were part of a revolutionary Stealth
+    Flood Management Program, explaining that citizens simply "lack the vision" to
+    see them.
 
+    
 
+    Meanwhile, engineers pointed to a newly constructed drainage
+    canal on official documents that, according to local residents, currently serves
+    as "an excellent fishing spot because it doesn''t exist."
 
-    The Department of Imaginary Infrastructure clarified
-    that the missing drainage systems were part of a revolutionary Stealth Flood
-    Management Program, explaining that citizens simply "lack the vision" to see
-    them.
+    
 
-
-
-    Meanwhile, engineers pointed to a newly constructed drainage canal
-    on official documents that, according to local residents, currently serves as
-    "an excellent fishing spot because it doesn''t exist."
-
-
-
-    Traffic reached
-    historic levels after major roads transformed into temporary rivers, prompting
-    ride-hailing apps to introduce a new vehicle category:
+    Traffic
+    reached historic levels after major roads transformed into temporary rivers,
+    prompting ride-hailing apps to introduce a new vehicle category:
 
     Boat (Economy).
 
     One
     commuter shared his appreciation.
 
-
+    
 
     "I left for work at 7 AM and arrived
     just in time for tomorrow."
@@ -10489,11 +10072,11 @@ MonoBehaviour:
     wearing spotless boots and life jackets for photo opportunities before departing
     in helicopters due to "unexpected water."
 
+    
 
-
-    Experts predict that if flooding
-    continues, Metro Manila may soon qualify as Southeast Asia''s newest island-hopping
-    destination.'
+    Experts predict that if
+    flooding continues, Metro Manila may soon qualify as Southeast Asia''s newest
+    island-hopping destination.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a34e75096667488a027fec7939ea8, type: 2}
   m_sharedMaterial: {fileID: -3416384718526908630, guid: 187a34e75096667488a027fec7939ea8, type: 2}
@@ -11220,43 +10803,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987165531}
   m_CullTransparentMesh: 1
---- !u!1 &2000786962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2000786963}
-  m_Layer: 5
-  m_Name: -- TestRemove --
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2000786963
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000786962}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 575592664}
-  - {fileID: 1345922077}
-  m_Father: {fileID: 1703294206}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 251.50006, y: 401.7593}
-  m_SizeDelta: {x: 983.0001, y: 220.48138}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2013317319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11363,12 +10909,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746602883469217965, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3746602883469217965, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2013317334}
+      objectReference: {fileID: 2013317328}
     - target: {fileID: 3746602883469217965, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -11379,15 +10925,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746602883469217965, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: CampaignClose, Assembly-CSharp
+      value: OpenSettings, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3746602883469217965, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 400470188}
     - target: {fileID: 3746602883469217965, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.CanvasGroup, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5921597969542622684, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_Type
@@ -11442,7 +10988,7 @@ PrefabInstance:
       addedObject: {fileID: 2013317322}
     - targetCorrespondingSourceObject: {fileID: 8996103045056439148, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2013317334}
+      addedObject: {fileID: 2013317328}
   m_SourcePrefab: {fileID: 100100000, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
 --- !u!224 &2013317320 stripped
 RectTransform:
@@ -11466,7 +11012,7 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &2013317334
+--- !u!114 &2013317328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11475,10 +11021,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2013317321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40775ed4f6176f14f8d0460c8abb16c1, type: 3}
+  m_Script: {fileID: 11500000, guid: c68375ffa2321ee4884fc7346ee33672, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CampaignClose
-  campaignCanvas: {fileID: 400470188}
+  m_EditorClassIdentifier: Assembly-CSharp::OpenSettings
 --- !u!1 &2013924713
 GameObject:
   m_ObjectHideFlags: 0
@@ -14347,43 +13892,43 @@ MonoBehaviour:
     was never in danger," one anonymous spokesperson said while standing knee-deep
     in floodwater. "Mission accomplished."
 
+    
 
+    Residents were reportedly
+    amazed after discovering that several completed "flood control projects" had
+    become invisible during the storm.
 
-    Residents were reportedly amazed
-    after discovering that several completed "flood control projects" had become
-    invisible during the storm.
+    
 
+    "I''ve heard of ghost employees,"
+    said one commuter stranded on a floating jeepney. "But ghost drainage canals?
+    That''s next-level innovation."
 
+    
 
-    "I''ve heard of ghost employees," said one
-    commuter stranded on a floating jeepney. "But ghost drainage canals? That''s
-    next-level innovation."
+    The Department of Imaginary Infrastructure
+    clarified that the missing drainage systems were part of a revolutionary Stealth
+    Flood Management Program, explaining that citizens simply "lack the vision" to
+    see them.
 
+    
 
+    Meanwhile, engineers pointed to a newly constructed drainage
+    canal on official documents that, according to local residents, currently serves
+    as "an excellent fishing spot because it doesn''t exist."
 
-    The Department of Imaginary Infrastructure clarified
-    that the missing drainage systems were part of a revolutionary Stealth Flood
-    Management Program, explaining that citizens simply "lack the vision" to see
-    them.
+    
 
-
-
-    Meanwhile, engineers pointed to a newly constructed drainage canal
-    on official documents that, according to local residents, currently serves as
-    "an excellent fishing spot because it doesn''t exist."
-
-
-
-    Traffic reached
-    historic levels after major roads transformed into temporary rivers, prompting
-    ride-hailing apps to introduce a new vehicle category:
+    Traffic
+    reached historic levels after major roads transformed into temporary rivers,
+    prompting ride-hailing apps to introduce a new vehicle category:
 
     Boat (Economy).
 
     One
     commuter shared his appreciation.
 
-
+    
 
     "I left for work at 7 AM and arrived
     just in time for tomorrow."
@@ -14392,11 +13937,11 @@ MonoBehaviour:
     wearing spotless boots and life jackets for photo opportunities before departing
     in helicopters due to "unexpected water."
 
+    
 
-
-    Experts predict that if flooding
-    continues, Metro Manila may soon qualify as Southeast Asia''s newest island-hopping
-    destination.'
+    Experts predict that if
+    flooding continues, Metro Manila may soon qualify as Southeast Asia''s newest
+    island-hopping destination.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a34e75096667488a027fec7939ea8, type: 2}
   m_sharedMaterial: {fileID: -3416384718526908630, guid: 187a34e75096667488a027fec7939ea8, type: 2}
