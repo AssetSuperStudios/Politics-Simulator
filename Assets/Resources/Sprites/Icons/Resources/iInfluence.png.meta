@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Influence_0
+      name: influence_0
       rect:
         serializedVersion: 2
         x: 2
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Influence_0: -3089824487952754069
+      influence_0: -3089824487952754069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

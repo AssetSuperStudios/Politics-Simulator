@@ -25,7 +25,8 @@ public class CharacterSelector : MonoBehaviour
 
     // Load initial character at Start
     // Calls CharacterCycle() and NewPlayerData()
-    void Start() {
+    void Start()
+    {
         CharacterCycle(0);
         NewPlayerData();
     }

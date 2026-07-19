@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Calendar_0
+      name: calendar_0
       rect:
         serializedVersion: 2
         x: 2
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Calendar_0: -3624907368250497581
+      calendar_0: -3624907368250497581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

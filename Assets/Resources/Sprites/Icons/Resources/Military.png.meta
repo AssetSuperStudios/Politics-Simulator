@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Military_0
+      name: military_0
       rect:
         serializedVersion: 2
         x: 3
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Military_0: 5543885359478068036
+      military_0: 5543885359478068036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

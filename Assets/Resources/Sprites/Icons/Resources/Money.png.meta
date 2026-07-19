@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Money_0
+      name: money_0
       rect:
         serializedVersion: 2
         x: 2
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Money_0: 5670732621190257608
+      money_0: 5670732621190257608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
