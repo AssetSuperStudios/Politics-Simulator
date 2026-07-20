@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpdateData
   _currentUpdate:
     updateDescription: Successful action!
-    updateSpritePath: hire_police
-    updateFlavorText: Hire police to increase safety.
-    updateType: 2
+    updateSpritePath: build_farm
+    updateFlavorText: Organize a sports festival to boost morale and safety.
+    updateType: 1
     updateOptionOne: 
     updateOptionTwo: 
     updateAuthorName: 

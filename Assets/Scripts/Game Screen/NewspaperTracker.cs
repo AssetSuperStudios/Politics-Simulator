@@ -11,6 +11,8 @@ public class NewspaperTracker : MonoBehaviour
 {
     // Serialize Data Scriptable Object
     [SerializeField] private UpdateData updatesObject;  // Assets/Scripts/Scriptables/Data/UpdateData.cs
+    // Initialize sprite path
+    private string spriteLocation = "Sprites/Icons/Updates";
 
     public void EventPopup(Boolean hasChoices, Action<Boolean> UpdatesPopup)
     {
@@ -57,7 +59,7 @@ public class NewspaperTracker : MonoBehaviour
         }
         
         // Set the newspaper values
-        transform.Find("ImageIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>(updatesObject.currentUpdate.updateSpritePath);
+        transform.Find("ImageIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>($"{spriteLocation}/{updatesObject.currentUpdate.updateSpritePath}");
         transform.Find("TextBoundaryBox/TextUpdateSubtitle").GetComponent<TMP_Text>().text = $"Philippines | National <pos=60%>{updatesObject.currentUpdate.updateAuthorName}</pos>";
         transform.Find("TextBoundaryBox/TextUpdate").GetComponent<TMP_Text>().text = updatesObject.currentUpdate.updateFlavorText;
         

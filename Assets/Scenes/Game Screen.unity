@@ -545,7 +545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5691898723262930639, guid: c2337e301d745024f86298c75fd12f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5222ffe81250e543a0c56245f491520, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3494,11 +3494,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628631823369346834, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 628631823369346834, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -156.10571
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 753517114675505709, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3702,11 +3702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080588665799112591, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4080588665799112591, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -156.10571
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4222345829476138012, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_Alpha
@@ -3918,11 +3918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8244598197796969790, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8244598197796969790, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -156.10571
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8312565770892740068, guid: 9e31ad2b481989b4ba5f69ee61636a8e, type: 3}
       propertyPath: m_Size
@@ -11935,7 +11935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8996103045056439148, guid: 503967fb5307f9f44ad43e9f78178ad9, type: 3}
       propertyPath: m_Name
-      value: ButtonImgPrefab
+      value: ButtonClose
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13401,7 +13401,7 @@ GameObject:
   - component: {fileID: 6770455258209224103}
   - component: {fileID: 71061330344600855}
   m_Layer: 5
-  m_Name: ImageMoney
+  m_Name: ImageMilitary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13476,7 +13476,7 @@ GameObject:
   - component: {fileID: 6638959489996455318}
   - component: {fileID: 1588937033031492593}
   m_Layer: 5
-  m_Name: TextMoney
+  m_Name: TextMilitary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13820,7 +13820,7 @@ GameObject:
   - component: {fileID: 8078904663900401148}
   - component: {fileID: 7559226883906115976}
   m_Layer: 5
-  m_Name: ImageButtonFill
+  m_Name: ImageTitleFill
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14517,7 +14517,7 @@ GameObject:
   - component: {fileID: 4033690528721276072}
   - component: {fileID: 4860796248795042967}
   m_Layer: 5
-  m_Name: ImageButtonBorder
+  m_Name: ImageTitleBorder
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

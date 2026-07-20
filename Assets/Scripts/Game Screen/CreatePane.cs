@@ -24,7 +24,7 @@ public class CreatePane : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         // Then set the values of the Actions Pane based on the action in the index selected
         var action = actionsReference.ActionList[listIndex];
         actionsPanel.transform.Find("TitleBoundaryBox/TextBoundingBox/TextActionName").GetComponent<TMP_Text>().text = action.actionName;
-        actionsPanel.transform.Find("ResourcesHolder/MilitaryHolder/TextMoney").GetComponent<TMP_Text>().text = action.resourceMilitary.ToString();
+        actionsPanel.transform.Find("ResourcesHolder/MilitaryHolder/TextMilitary").GetComponent<TMP_Text>().text = action.resourceMilitary.ToString();
         actionsPanel.transform.Find("ResourcesHolder/InfluenceHolder/TextInfluence").GetComponent<TMP_Text>().text = action.resourceInfluence.ToString();
         actionsPanel.transform.Find("ResourcesHolder/MoneyHolder/TextMoney").GetComponent<TMP_Text>().text = action.resourceMoney.ToString();
         actionsPanel.transform.Find("ResourcesHolder/TimeHolder/TextTime").GetComponent<TMP_Text>().text = action.resourceTime.ToString();
